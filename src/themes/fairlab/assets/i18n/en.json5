@@ -4,4 +4,10 @@
 
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "DSpace :: ",
+
+  // Override the default translation for your custom link 
+  "navbar.link.museum": "DBM Bochum", 
+
+  "menu.header.about": "About", 
+  "info.about.breadcrumbs": "About", 
 }
