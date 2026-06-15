@@ -1,0 +1,29 @@
+:host {
+  #main-site-navigation {
+    // General styles for all nav links within this component
+    //.ds-menu-item {
+    //  font-size: 1.1rem !important; /* Adjust this value as needed */
+    //}
+
+    // Specific styles for the self-defined DBM Bochum link
+    .nav-item {
+      a[href="https://www.bergbaumuseum.de/"] {
+        color: var(--ds-navbar-link-color) !important;
+        padding: var(--ds-navbar-item-vertical-padding) var(--ds-navbar-item-horizontal-padding);
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &:hover {
+          color: var(--ds-navbar-link-color-hover) !important;
+        }
+      }
+    }
+  }
+
+  // Ensures styles also affect menu items rendered by dynamic Angular components (ngComponentOutlet)
+  ::ng-deep .ds-menu-item {
+    font-size: 1.2rem !important; /* Adjust this value as needed */
+    font-weight: 350;
+  }
+}
