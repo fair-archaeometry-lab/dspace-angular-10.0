@@ -1,0 +1,69 @@
+<header id="main-site-header">
+  <div
+    id="main-site-header-container"
+    class="container d-flex flex-row flex-nowrap align-items-center justify-content-between"
+  >
+    <div
+      id="header-left"
+      class="d-flex flex-row flex-nowrap align-items-center flex-grow-1"
+    >
+      <a
+        class="header-logo-link"
+        routerLink="/home"
+        [attr.aria-label]="'home.title' | translate"
+        role="button"
+        tabindex="0"
+      >
+        <img
+          id="header-logo"
+          src="assets/fairlab/images/fair-lab-large-text-logo.svg"
+          [attr.alt]="'menu.header.image.logo' | translate"
+        />
+      </a>
+
+      @if ((isMobile$ | async) !== true) {
+        <nav
+          id="desktop-navbar"
+          class="navbar navbar-expand p-0 align-items-center"
+          [attr.aria-label]="'nav.main.description' | translate"
+        >
+          <ds-navbar></ds-navbar>
+        </nav>
+      }
+    </div>
+
+    <div
+      id="header-right"
+      class="d-flex flex-row flex-nowrap align-items-center justify-content-end flex-shrink-0"
+    >
+      <ds-search-navbar></ds-search-navbar>
+
+      <div
+        role="toolbar"
+        class="header-toolbar"
+        [attr.aria-label]="'nav.user.description' | translate"
+      >
+        <ds-lang-switch></ds-lang-switch>
+        <ds-context-help-toggle></ds-context-help-toggle>
+        <ds-auth-nav-menu></ds-auth-nav-menu>
+        <ds-impersonate-navbar></ds-impersonate-navbar>
+      </div>
+
+      @if (isMobile$ | async) {
+        <div id="mobile-navbar-toggler" class="ps-2">
+          <button
+            id="navbar-toggler"
+            class="navbar-toggler px-0"
+            type="button"
+            (click)="toggleNavbar()"
+            aria-controls="collapsingNav"
+            aria-expanded="false"
+            [attr.aria-label]="'nav.toggle' | translate"
+          >
+            <span class="fas fa-bars fa-fw toggler-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</header>
