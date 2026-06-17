@@ -130,6 +130,10 @@
       .dropdown-menu .ds-menu-item {
         padding-left: 1.5rem !important;
       }
+       //remove identation of menu item that contains sub-items	
+      .ds-menu-toggler-wrapper .ds-menu-item {
+        padding-left: 0 !important;
+      }
     }
   }
 
