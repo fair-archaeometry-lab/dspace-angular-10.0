@@ -13,8 +13,20 @@
     }
   }
 
+ #desktop-navbar {
+    align-items: center !important;
+  }
+
   img#header-logo {
-    height: var(--ds-header-logo-height);
+    //height: var(--ds-header-logo-height);
+        // Change this from the variable to a specific pixel value or rem
+    height: 60px; 
+    
+    // Ensure width is auto to maintain aspect ratio (usually default, but good to be explicit)
+    width: auto; 
+    
+    // Optional: Ensure it doesn't overflow if it gets too big
+    max-width: 100%; 
   }
 
   button#navbar-toggler {
@@ -24,5 +36,4 @@
       color: var(--ds-header-icon-color-hover);
     }
   }
-
 }
