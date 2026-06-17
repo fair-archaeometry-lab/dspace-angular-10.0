@@ -40,29 +40,103 @@
     }
   }
 
-  /** Mobile menu styling **/
   @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
     .navbar {
       width: 100%;
       background-color: var(--bs-white);
-      position: absolute;
-      overflow: hidden;
-      height: 0;
+      position: static;
+      overflow: visible;
+      height: auto;
       z-index: var(--ds-nav-z-index);
 
       &.open {
         height: auto;
-        min-height: 100vh;
-        border-bottom: var(--ds-header-navbar-border-bottom-height) var(--ds-header-navbar-border-bottom-color) solid;
+        min-height: 0;
+        border-bottom: 0;
+      }
+    }
+
+    .navbar-inner-container,
+    #collapsingNav {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 0;
+    }
+
+    .mobile-menu-brand {
+      display: flex;
+      align-items: center;
+      min-height: 64px;
+      padding: 0.5rem 0.75rem;
+      background-color: var(--ds-navbar-link-color, #1f2757);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .mobile-menu-brand a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      width: 100%;	
+    }
+
+    .mobile-menu-logo {
+      display: block;
+      height: 36px;	
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;	
+    }
+
+    #main-site-navigation {
+      display: block;
+      width: 100%;
+      background-color: var(--bs-white);
+      height: auto;
+      min-height: 0;
+      gap: 0;
+    }
+
+    #main-navbar ::ng-deep {
+      .ds-menu-item-wrapper {
+        display: block;
+        width: 100%;
+        background-color: var(--ds-navbar-link-bg);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .ds-menu-item,
+      .ds-menu-toggler-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 3rem;
+        padding: 0.9rem 1rem !important;
+        text-decoration: none;
+      }
+
+      .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: #f7f7f7;
+      }
+
+      .dropdown-menu .ds-menu-item {
+        padding-left: 1.5rem !important;
       }
     }
   }
 
-  /* TODO remove when https://github.com/twbs/bootstrap/issues/24726 is fixed */
   .navbar-expand-md.navbar-container {
     @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
       > .navbar-inner-container {
-        padding: 0 var(--bs-spacer);
+        padding: 0;
       }
 
       padding: 0;
