@@ -4,7 +4,6 @@ import {
 } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { MarkdownViewerComponent } from 'src/app/shared/markdown-viewer/markdown-viewer.component';
 
 import { HomeCoarComponent } from '../../../../app/home-page/home-coar/home-coar.component';
 import { ThemedHomeNewsComponent } from '../../../../app/home-page/home-news/themed-home-news.component';
@@ -17,14 +16,13 @@ import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/th
 
 @Component({
   selector: 'ds-themed-home-page',
-  // styleUrls: ['./home-page.component.scss'],
-  styleUrls: ['../../../../app/home-page/home-page.component.scss'],
-  // templateUrl: './home-page.component.html'
-  templateUrl: '../../../../app/home-page/home-page.component.html',
+  styleUrls: ['./home-page.component.scss'],
+  //styleUrls: ['../../../../app/home-page/home-page.component.scss'],
+  templateUrl: './home-page.component.html',
+  //templateUrl: '../../../../app/home-page/home-page.component.html',
   imports: [
     AsyncPipe,
     HomeCoarComponent,
-    MarkdownViewerComponent,
     NgTemplateOutlet,
     RecentItemListComponent,
     SuggestionsPopupComponent,

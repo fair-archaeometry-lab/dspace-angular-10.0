@@ -1,0 +1,102 @@
+<div class="background-image-container mt-ncs">
+  <div class="container">
+    <div class="jumbotron py-2 px-2 py-sm-3 px-sm-0 mt-0 mb-2">
+      <!-- Title Section -->
+      <div class="d-flex flex-wrap mb-2">
+        <div>
+          <h2 class="title">Platform built for FAIR Future of Archaeometry</h2>
+          <p class ="subtitle">
+            <span>FAIR Archaeometry Lab</span> is a digital portal designed to support the management of laboratory workflows in a way that is truly FAIR—Findable, Accessible, Interoperable, and Reusable. 
+          </p>
+        </div>
+      </div>
+      <!-- insert search form component  -->
+      <div>
+        <ds-themed-search-form 
+          [inPlaceSearch]="false"
+          [searchPlaceholder]="'home.search-form.placeholder' | translate">
+        </ds-themed-search-form>
+      </div>
+       
+      <!-- Description Section -->
+      <div class="box-title">
+        <div>
+          <p>Portal Features</p>
+        </div>
+      </div>
+
+      <!-- Feature Boxes Grid -->
+      <div class="d-flex flex-wrap">
+        <!-- Box 1 -->
+        <div class="col-md-6 col-lg-3 p-1">
+          <div class="h-100 p-2">
+            <div class="text-center mb-2">
+              <i class="fas fa-magnifying-glass fa-2x"></i>
+            </div>
+            <p class="text-center">
+              <span>Discover</span> service providers, devices, and analysis methods tailored to your specific sampling needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="col-md-6 col-lg-3 p-1">
+          <div class="h-100 p-2">
+            <div class="text-center mb-2">
+              <i class="fas fa-square-plus fa-2x"></i>
+            </div>
+            <p class="text-center"><span>Register</span>, manage, and share your digital resources using persistent identifiers and automated  workflows</p>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="col-md-6 col-lg-3 p-1">
+          <div class="h-100 p-2">
+            <div class="text-center mb-2">
+              <i class="fas fa-scale-balanced fa-2x"></i>
+            </div>
+            <p class="text-center"><span>Standardise</span> your metadata descriptions with  community-driven schemas and controlled vocabularies.</p>
+          </div>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="col-md-6 col-lg-3 p-1">
+          <div class="h-100 p-2">
+            <div class="text-center mb-2">
+              <i class="fas fa-wheat-awn fa-2x"></i>
+            </div>
+            <p class="text-center">
+              <span>Exchange</span> data with global repositories and aggregators via standard 
+              <a href="https://www.openarchives.org/pmh/" target="_blank" role="link" tabindex="0">OAI-PMH</a> 
+              harvesting
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Test Accounts Section 
+      <div class="mt-4">
+        <p>The test user accounts below have their password set to the name of this software in lowercase.</p>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-user-shield me-2"></i> Demo Site Administrator = dspacedemo+admin&#64;gmail.com</li>
+          <li><i class="fas fa-users-cog me-2"></i> Demo Community Administrator = dspacedemo+commadmin&#64;gmail.com
+          </li>
+          <li><i class="fas fa-folder-open me-2"></i> Demo Collection Administrator = dspacedemo+colladmin&#64;gmail.com
+          </li>
+          <li><i class="fas fa-upload me-2"></i> Demo Submitter = dspacedemo+submit&#64;gmail.com</li>
+        </ul>
+      </div> -->
+    </div>
+  </div>
+    
+  <picture class="background-image">
+    <source type="image/webp"
+      srcset="assets/fairlab/images/banner-archlab.webp 1800w, assets/fairlab/images/banner-archlab.webp 1000w, assets/fairlab/images/banner-archlab.webp 568w">
+    <source type="image/jpg"
+      srcset="assets/fairlab/images/banner-archlab.jpg 1800w, assets/fairlab/images/banner-archlab.jpg 1000w, assets/fairlab/images/banner-archlab.jpg 568w">
+    <img alt=""
+      [src]="'assets/fairlab/images/banner-archlab.jpg'" /><!-- without the []="''" Firefox downloads both the fallback and the resolved image -->
+  </picture>
+  <small class="credits">Image created by <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">&#64;perplexity ai</a></small>
+</div>
