@@ -8,7 +8,7 @@
 // Import the font (from a URL)
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
 
- 
+
 // Configure Bootstrap to use this font (and list a number of backup fonts to use on various systems)
 $font-family-sans-serif: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
@@ -37,14 +37,14 @@ $font-family-sans-serif: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe 
 // $link-color: $info !default;
 
 // Override semantic colors here
-$primary:   #43515f;  // Gray
-$secondary: #495057;  // As Bootstrap $gray-700
-$success:   #92c642;  // Lime
-$info:      #1e6f90;  // Light blue
-$warning:   #ec9433;  // Orange
-$danger:    #cf4444;  // Red
-$light:     #f8f9fa;  // As Bootstrap $gray-100
-$dark:      #43515f;  // Dark blue
+$primary: #43515f; // Gray
+$secondary: #495057; // As Bootstrap $gray-700
+$success: #92c642; // Lime
+$info: #1e6f90; // Light blue
+$warning: #ec9433; // Orange
+$danger: #cf4444; // Red
+$light: #f8f9fa; // As Bootstrap $gray-100
+$dark: #43515f; // Dark blue
 
 // Add new semantic colors here (you don't need to add existing semantic colors)
 @import '../../../styles/_variables.scss';
@@ -56,15 +56,15 @@ $theme-colors: map-merge($theme-colors, $theme-custom-semantic-colors);
 
 $min-contrast-ratio: 2.06 !default;
 
-$body-color: #343a40;       // As Bootstrap $gray-800
+$body-color: #343a40; // As Bootstrap $gray-800
 
-$link-color: #1e6f90;       // Blue green, as DSpace $info
+$link-color: #1e6f90; // Blue green, as DSpace $info
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: underline;
 
-$table-accent-bg: #f8f9fa;  // As Bootstrap $gray-100
-$table-hover-bg: #ced4da;   // As Bootstrap $gray-400
+$table-accent-bg: #f8f9fa; // As Bootstrap $gray-100
+$table-hover-bg: #ced4da; // As Bootstrap $gray-400
 
 $navbar-dark-color: #fff;
 
@@ -72,7 +72,7 @@ $navbar-dark-color: #fff;
 /*** CUSTOM DSPACE VARIABLES ***/
 
 $ds-home-news-link-color: #D2FC93;
-$ds-header-navbar-border-bottom-color: #92c642;
+$ds-header-navbar-border-bottom-color: #4dc9f6;
 
 $ds-breadcrumb-link-color: #154E66 !default;
 $ds-breadcrumb-link-active-color: #040D11 !default;
