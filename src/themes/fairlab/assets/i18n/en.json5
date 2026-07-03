@@ -10,4 +10,8 @@
 
   "menu.header.about": "About", 
   "info.about.breadcrumbs": "About", 
+
+  // translate service submission form
+  "submission.sections.submit.progressbar.describe.service.core": "Core Information",
+  "submission.sections.submit.progressbar.describe.service.scope": "Scope",
 }
