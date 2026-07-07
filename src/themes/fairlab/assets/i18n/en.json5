@@ -14,4 +14,35 @@
   // translate service submission form
   "submission.sections.submit.progressbar.describe.service.core": "Core Information",
   "submission.sections.submit.progressbar.describe.service.scope": "Scope",
+  "submission.sections.submit.progressbar.describe.service.access": "Access",
+  "submission.sections.submit.progressbar.describe.service.resources": "Digital Resources",
+
+    // translate instrument form
+  "submission.sections.submit.progressbar.describe.instrument.identity": "Core Information",
+  "submission.sections.submit.progressbar.describe.instrument.access": "Access",
+  "submission.sections.submit.progressbar.describe.instrument.technical": "Technical Information",
+  "submission.sections.submit.progressbar.describe.instrument.resources": "Digital Resources",
+
+      // translate laboratory form
+  "submission.sections.submit.progressbar.describe.laboratory.step": "Core Information",
+
+        // translate standard method form
+  "submission.sections.submit.progressbar.describe.method.step": "Core Information",
+
+      // translate software form
+  "submission.sections.submit.progressbar.describe.software.basic": "Core Information",
+  "submission.sections.submit.progressbar.describe.software.development": "Development Details",
+  "submission.sections.submit.progressbar.describe.software.addition": "Additional Information",
+
+        // translate reference material form
+  "submission.sections.submit.progressbar.describe.georem.material": "Core Information",
+  "submission.sections.submit.progressbar.describe.georem.chemistry": "Measurement Details",
+  "submission.sections.submit.progressbar.describe.georem.citation": "Citation",
+
+
+   // translate "home.top-level-communities.head": "Communities in DSpace"
+
+   "home.top-level-communities.head": "Communities in FAIR Archaeometry Lab",
+
 }
+
