@@ -7925,4 +7925,62 @@
   "submission.sections.submit.progressbar.describe.georem.chemistry": "Measurement Details",
 
   "submission.sections.submit.progressbar.describe.georem.citation": "Citation",
+
+  "search.filters.filter.researchDiscipline.head": "Research Discipline",
+
+  "search.filters.filter.technique.head": "Analytical Technique",
+
+  "search.filters.filter.measurablePropertyClass.head": "Class of Measurable Property",
+
+  "search.filters.filter.measurablePropertyMaterial.head": "Material",
+
+  "search.filters.filter.measurablePropertyMaterial.label": "Search Material",
+
+  "search.filters.filter.operatingLanguage.head": "Operating Language",
+
+  "search.filters.filter.creationDate.head": "Established Date of Service",
+
+  "search.filters.filter.creativeDate.min.label": "Start",
+
+  "search.filters.filter.creativeDate.max.label": "End",
+
+  "search.filters.filter.active.head": "Active",
+
+  "search.filters.filter.readinessLevel.head": "Readiness Level",
+
+  "sorting.service.creationDate.DESC": "Date established Descending",
+
+  "search.filters.filter.measurablePropertyMaterial.placeholder": "Search Material",
+
+  "search.filters.filter.creationDate.min.label": "Start",
+
+  "search.filters.filter.creationDate.max.label": "End",
+
+  "search.filters.filter.owner.head": "Owner of Instrument",
+
+  "search.filters.filter.manufacturer.head": "Instrument Manufacturer",
+
+  "search.filters.filter.model.head": "Instrument Model",
+
+  "search.filters.filter.instrumentType.head": "Instrument Type",
+
+  "search.filters.filter.parameter.head": "Measurable Parameter",
+
+  "search.filters.filter.parameter.label": "Search Parameter",
+
+  "search.filters.filter.parameter.placeholder": "Search Parameter",
+
+  "search.filters.filter.impact.head": "Impact on Samples",
+
+  "search.filters.filter.commissionedDate.head": "Date of Commission",
+
+  "search.filters.filter.commissionedDate.min.label": "Start",
+
+  "search.filters.filter.commissionedDate.max.label": "End",
+
+  "sorting.instrument.date.commissioned.DESC": "Date commissioned Descending",
+
+  "sorting.instrument.instrumentType.name.ASC": "Instrument Type Ascending",
+
+  "sorting.instrument.manufacturer.name.ASC": "Manufacturer Ascending",
 }
