@@ -77,5 +77,59 @@
    "sorting.instrument.instrumentType.name.ASC": "Instrument Type Ascending",
    "sorting.instrument.manufacturer.name.ASC": "Manufacturer Ascending",
 
-}
 
+      // translate for laboratory filters
+
+   "search.filters.filter.institutionCategory.head": "Category of Institution",
+   "search.filters.filter.parentOrganization.head": "Parent Organization",
+   "search.filters.filter.institutionCountry.head": "Country of Institution",
+   "search.filters.filter.institutionStartDate.head": "Establihsed Date",
+   "search.filters.filter.institutionStartDate.min.label": "Start",
+   "search.filters.filter.institutionStartDate.max.label": "End",
+   "sorting.ror.locations.countryName.ASC": "Country Name Ascending",
+   "sorting.ror.establihsed.DESC": "Establihsed Date Descending",
+
+      // translate for standard method filters
+
+   "search.filters.filter.methodAuthor.head": "Author",
+   "search.filters.filter.methodTechnique.head": "Method Technique",
+   "search.filters.filter.methodType.head": "Type of Method",
+   "search.filters.filter.methodDate.head": "Date of Creation",
+   "search.filters.filter.methodDate.min.label": "Start",
+   "search.filters.filter.methodDate.max.label": "End",
+   "sorting.dc.contributor.author.ASC": "Author Name Ascending",
+   "sorting.method.createDate.DESC": "Creation Date Descending",
+
+         // translate for software filters
+
+   "search.filters.filter.applicationLicense.head": "License Type",
+   "search.filters.filter.applicationCategory.head": "Category of Application",
+   "search.filters.filter.applicationAuthor.head": "Author Name",
+   "search.filters.filter.programmingLanguage.head": "Programming Language",
+   "search.filters.filter.operatingSystem.head": "Operating System",
+   "search.filters.filter.applicationStatus.head": "Development Status",
+   "search.filters.filter.releaseDate.min.label": "Start",
+   "search.filters.filter.releaseDate.max.label": "End",
+   "sorting.software.currentVersion.releaseDate.DESC": "Release Date Descending",
+
+            // translate for reference material filters
+
+   "search.filters.filter.refmaterialCategory.head": "Category",
+   "search.filters.filter.refmaterialMaterialType.head": "Material Type",
+   "search.filters.filter.refmaterialIdentifierType.head": "Identifier Type",
+   "search.filters.filter.refmaterialInstitution.head": "Custodian",
+   "search.filters.filter.refmaterialProviderName.head": "Manufacturer",
+   "search.filters.filter.refmaterialChemistryMethod.head": "Measurement Method",
+   "search.filters.filter.refmaterialChemistryAnalyte.head": "Measured Analyte",
+   "sorting.georem.referenceMaterial.publicationYear.DESC": "Publication Year Descending",
+
+               // translate for personnel filters
+
+   "search.filters.filter.authorFamilyName.head": "Author Family Name",
+   "search.filters.filter.authorGivenName.head": "Author Given Name",
+   "search.filters.filter.institutionName.head": "Institution Name",
+   "search.filters.filter.institutionType.head": "Institution Type",
+ 
+   
+
+}
