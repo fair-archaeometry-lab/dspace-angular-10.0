@@ -8067,4 +8067,70 @@
   "search.filters.filter.institutionName.head": "Institution Name",
 
   "search.filters.filter.institutionType.head": "Institution Type",
+
+  "search.listelement.badge": "Service",
+
+  "instrument.listelement.badge": "Instrument",
+
+  "laboratory.listelement.badge": "Laboratory",
+
+  "software.listelement.badge": "Software",
+
+  "standardmethod.listelement.badge": "Method",
+
+  "relatedpublication.listelement.badge": "Related Publication",
+
+  "researcher.listelement.badge": "Personnel",
+
+  "referencematerial.listelement.badge": "Reference Material",
+
+  "service.page.titleprefix": "Service",
+
+  "service.page.options": "Options",
+
+  "service.page.edit": "Default edit",
+
+  "instrument.page.titleprefix": "Instrument",
+
+  "instrument.page.options": "Options",
+
+  "instrument.page.edit": "Default edit",
+
+  "laboratory.page.titleprefix": "Laboratory",
+
+  "laboratory.page.options": "Options",
+
+  "laboratory.page.edit": "Default edit",
+
+  "standardmethod.page.titleprefix": "Method",
+
+  "standardmethod.page.options": "Options",
+
+  "standardmethod.page.edit": "Default edit",
+
+  "software.page.titleprefix": "Software",
+
+  "software.page.options": "Options",
+
+  "software.page.edit": "Default edit",
+
+  "referencematerial.page.titleprefix": "Reference Material",
+
+  "relatedpublication.page.titleprefix": "Publication",
+
+  "researcher.page.titleprefix": "Personnel",
+
+  "submission.sections.submit.progressbar.describe.relatedpublication.step": "Publication Infos",
+
+  "referencematerial.page.edit": "Default edit",
+
+  "relatedpublication.page.edit": "Default edit",
+
+  "researcher.page.edit": "Default edit",
+
+  "referencematerial.oage.options": "Options",
+
+  "relatedpublication.page.options": "Options",
+
+  "researcher.page.options": "Options",
 }

@@ -34,11 +34,13 @@
   "submission.sections.submit.progressbar.describe.software.development": "Development Details",
   "submission.sections.submit.progressbar.describe.software.addition": "Additional Information",
 
-        // translate reference material form
+      // translate reference material form
   "submission.sections.submit.progressbar.describe.georem.material": "Core Information",
   "submission.sections.submit.progressbar.describe.georem.chemistry": "Measurement Details",
   "submission.sections.submit.progressbar.describe.georem.citation": "Citation",
 
+      // translate related publication form
+  "submission.sections.submit.progressbar.describe.relatedpublication.step": "Publication Infos",
 
    // translate "home.top-level-communities.head": "Communities in DSpace"
 
@@ -123,13 +125,54 @@
    "search.filters.filter.refmaterialChemistryAnalyte.head": "Measured Analyte",
    "sorting.georem.referenceMaterial.publicationYear.DESC": "Publication Year Descending",
 
-               // translate for personnel filters
+            // translate for personnel filters
 
    "search.filters.filter.authorFamilyName.head": "Author Family Name",
    "search.filters.filter.authorGivenName.head": "Author Given Name",
    "search.filters.filter.institutionName.head": "Institution Name",
    "search.filters.filter.institutionType.head": "Institution Type",
  
-   
+            // collection item labels
 
+   "search.listelement.badge": "Service",
+   "instrument.listelement.badge": "Instrument",
+   "laboratory.listelement.badge": "Laboratory",
+   "software.listelement.badge": "Software",
+   "standardmethod.listelement.badge": "Method",
+   "referencematerial.listelement.badge": "Reference Material",
+   "relatedpublication.listelement.badge": "Related Publication",
+   "researcher.listelement.badge": "Personnel",
+
+      // item pages edit
+   "service.page.titleprefix": "Service",
+   "service.page.options": "Options",
+   "service.page.edit": "Default edit",
+
+   "instrument.page.titleprefix": "Instrument",
+   "instrument.page.options": "Options",
+   "instrument.page.edit": "Default edit",
+
+   "laboratory.page.titleprefix": "Laboratory",
+   "laboratory.page.options": "Options",
+   "laboratory.page.edit": "Default edit",
+
+   "standardmethod.page.titleprefix": "Method",
+   "standardmethod.page.options": "Options",
+   "standardmethod.page.edit": "Default edit",
+
+   "software.page.titleprefix": "Software",
+   "software.page.options": "Options",
+   "software.page.edit": "Default edit",
+
+   "referencematerial.page.titleprefix": "Reference Material",
+   "referencematerial.oage.options": "Options",
+   "referencematerial.page.edit": "Default edit",
+
+   "relatedpublication.page.titleprefix": "Publication",
+   "relatedpublication.page.options": "Options",
+   "relatedpublication.page.edit": "Default edit",
+
+   "researcher.page.titleprefix": "Personnel",
+   "researcher.page.options": "Options",
+   "researcher.page.edit": "Default edit",
 }
