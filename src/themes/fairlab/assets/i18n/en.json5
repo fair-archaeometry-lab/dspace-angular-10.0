@@ -134,7 +134,7 @@
  
             // collection item labels
 
-   "search.listelement.badge": "Service",
+   "service.listelement.badge": "Service",
    "instrument.listelement.badge": "Instrument",
    "laboratory.listelement.badge": "Laboratory",
    "software.listelement.badge": "Software",
