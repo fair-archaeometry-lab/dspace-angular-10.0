@@ -3,38 +3,31 @@
   margin-bottom: 2rem;
 
   div.background-image-container {
-    background-color: #000000; 
     position: relative;
-    font-weight: 600;
-
-    // Mobile-first height strategy
-    min-height: 50vh; 
-    height: auto; 
-
-    // On Desktop (md and up), lock the height
-    @media (min-width: 768px) {
-        height: 87vh;
-        min-height: 60vh;
-        overflow: hidden; 
-    }
-    
     display: flex;
-    align-items: center;
-    justify-content: center; 
-    overflow: hidden; 
+    align-items: flex-start;
+    justify-content: center;
 
-    color: #ffffff; 
-    h2, p {
-      color: #ffffff !important; 
-      text-shadow: 0 2px 4px rgba(0,0,0,0.9); 
+    height: auto;
+    min-height: 0;
+    padding: clamp(1.5rem, 4vw, 4rem) 0 2rem;
+
+    overflow: hidden;
+    background-color: #000000;
+    color: #ffffff;
+
+    h2,
+    p {
+      color: #ffffff !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
       font-weight: 500;
       position: relative;
       z-index: 2;
     }
 
     .title {
-      color: #ffffff !important; 
-      text-shadow: 0 2px 4px rgba(0,0,0,0.9); 
+      color: #ffffff !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
       font-weight: 600;
       position: relative;
       font-size: 2.7rem;
@@ -44,82 +37,91 @@
     }
 
     .subtitle {
-      color: #ffffff !important; 
-      text-shadow: 0 2px 4px rgba(0,0,0,0.9); 
+      color: #ffffff !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
       font-weight: 550;
       position: relative;
       z-index: 2;
       font-size: 1.3rem;
     }
 
-.box-title {
-  p {
-    // 1. Define the direction (to bottom) for a vertical split 
-    // OR (to right) for a horizontal split.
-    // Here is 'to bottom' (Top half White, Bottom half Blue):
-    background: linear-gradient(to bottom, #ffffff 50%, #4dc9f6 50%);
-    
-    // If you wanted Left=White, Right=Blue, use:
-    // background: linear-gradient(to right, #ffffff 50%, #4dc9f6 50%);
+    .box-title {
+      p {
+        // 1. Define the direction (to bottom) for a vertical split 
+        // OR (to right) for a horizontal split.
+        // Here is 'to bottom' (Top half White, Bottom half Blue):
+        background: linear-gradient(to bottom, #ffffff 50%, #4dc9f6 50%);
 
-    // 2. Clip background to text
-    -webkit-background-clip: text;
-    background-clip: text;
+        // If you wanted Left=White, Right=Blue, use:
+        // background: linear-gradient(to right, #ffffff 50%, #4dc9f6 50%);
 
-    // 3. Make text transparent so background shows
-    color: transparent !important;
-    
-    // 4. Remove conflicting text-shadows
-    text-shadow: none !important;
+        // 2. Clip background to text
+        -webkit-background-clip: text;
+        background-clip: text;
 
-    // Optional: Make it bold/large enough to see the effect
-    font-weight: 800;
-    font-size: 2rem; 
-    margin: 0;
-    text-align: center;
-    margin-top: 3rem;
-  }
-}
+        // 3. Make text transparent so background shows
+        color: transparent !important;
+
+        // 4. Remove conflicting text-shadows
+        text-shadow: none !important;
+
+        // Optional: Make it bold/large enough to see the effect
+        font-weight: 800;
+        font-size: 2rem;
+        margin: 0;
+        text-align: center;
+        margin-top: 3rem;
+      }
+    }
 
     span {
-      color: #4dc9f6 !important; 
-      text-shadow: 0 2px 4px rgba(0,0,0,0.9); 
+      color: #4dc9f6 !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
       font-weight: 700;
       position: relative;
       z-index: 2;
     }
 
-    .background-image > img {
+    .background-image>img {
       position: absolute;
-      z-index: 0; 
+      z-index: 0;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; 
+      object-fit: cover;
       object-position: center center;
-      opacity: 0.8; 
+      opacity: 0.8;
     }
 
     .container {
       position: relative;
       z-index: 2;
-      background: rgba(0, 0, 0, 0.4); 
+      background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(3px);
-      padding: 1.5rem; 
+      padding: 1.5rem;
       border-radius: 8px;
-      max-width: 1000px; 
-      width: 90%; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      
-      &:before, &:after {
-        display: none; 
+      max-width: 1000px;
+      width: 90%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+      &:before,
+      &:after {
+        display: none;
       }
     }
 
     small.credits {
-      a { color: rgba(255,255,255,0.7); text-decoration: none; }
-      a:hover { text-decoration: underline; color: #fff; }
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+
       opacity: 0.6;
       position: absolute;
       right: 1rem;
@@ -134,12 +136,13 @@
   }
 
   a {
-    color: #4dc9f6; 
+    color: #4dc9f6;
     text-decoration: underline;
     transition: color 0.2s ease;
 
-    &:hover, &:focus {
-      color: #b3f5ff; 
+    &:hover,
+    &:focus {
+      color: #b3f5ff;
       text-shadow: 0 0 8px rgba(77, 201, 246, 0.6);
       text-decoration: none;
     }
@@ -147,52 +150,53 @@
 
   // MODIFIED SECTION: Feature Boxes (Dark/Glass Style)
   .d-flex.flex-wrap {
-    
+
     .col-md-6 {
-       margin-bottom: 1rem;
-       
-       > div {
-         // 1. Dark Glass Background (Matches theme)
-         background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black
-         backdrop-filter: blur(5px); // Frosted glass effect
-         
-         border-radius: 12px;
-         padding: 1.5rem;
-         
-         // 2. The Shadow (Relief Effect) - Deeper shadows for dark mode
-         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
-                     0 6px 6px rgba(0, 0, 0, 0.3);
-         
-         // 3. Subtle Border for definition
-         border: 1px solid rgba(255, 255, 255, 0.15);
-         
-         transition: all 0.3s ease;
-         
-         // 4. Hover Lift
-         &:hover {
-           transform: translateY(-5px); 
-           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 
-                       0 10px 10px rgba(0, 0, 0, 0.4);
-           background-color: rgba(0, 0, 0, 0.65); // Slightly darker on hover
-           border-color: rgba(255, 255, 255, 0.3); // Brighter border on hover
-         }
-         
-         // 5. Keep Text White
-         p, .text-center {
-            color: #ffffff !important; 
-            text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important; 
-         }
-       }
+      margin-bottom: 1rem;
+
+      >div {
+        // 1. Dark Glass Background (Matches theme)
+        background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black
+        backdrop-filter: blur(5px); // Frosted glass effect
+
+        border-radius: 12px;
+        padding: 1.5rem;
+
+        // 2. The Shadow (Relief Effect) - Deeper shadows for dark mode
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4),
+          0 6px 6px rgba(0, 0, 0, 0.3);
+
+        // 3. Subtle Border for definition
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        transition: all 0.3s ease;
+
+        // 4. Hover Lift
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6),
+            0 10px 10px rgba(0, 0, 0, 0.4);
+          background-color: rgba(0, 0, 0, 0.65); // Slightly darker on hover
+          border-color: rgba(255, 255, 255, 0.3); // Brighter border on hover
+        }
+
+        // 5. Keep Text White
+        p,
+        .text-center {
+          color: #ffffff !important;
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+        }
+      }
     }
 
     // Icons
     .fas {
-      color: #4dc9f6; 
+      color: #4dc9f6;
       margin-bottom: 10px;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-      
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+
       &:hover {
-        color: #b3f5ff; 
+        color: #b3f5ff;
         transform: scale(1.1);
         transition: transform 0.2s;
       }
