@@ -42,6 +42,8 @@
       // translate related publication form
   "submission.sections.submit.progressbar.describe.relatedpublication.step": "Publication Infos",
 
+  "submission.sections.submit.progressbar.describe.personnel.core": "Person Infos",
+
    // translate "home.top-level-communities.head": "Communities in DSpace"
 
    "home.top-level-communities.head": "Communities in FAIR Archaeometry Lab",
@@ -175,4 +177,41 @@
    "researcher.page.titleprefix": "Personnel",
    "researcher.page.options": "Options",
    "researcher.page.edit": "Default edit",
+
+   //search filter edit
+
+   "123456789/3.search.results.head": "Search Instrument",
+   "submission.sections.describe.relationship-lookup.title.isInstrumentOfService": "Select instrument records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isInstrumentOfService": "Tick the box and then scroll down to press close",
+
+   "123456789/4.search.results.head": "Search Laboratory/Institution",
+   "submission.sections.describe.relationship-lookup.title.isProvidedByLab": "Select laboratory records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProvidedByLab": "Tick the box and then scroll down to press close",
+
+   
+   "123456789/19.search.results.head": "Search Personnel",
+   "submission.sections.describe.relationship-lookup.title.isManagedByResearcher": "Select person records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isManagedByResearcher": "Tick the box and then scroll down to press close",
+
+   "submission.sections.describe.relationship-lookup.title.ownsInstrument": "Select instrument records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.ownsInstrument": "Tick the box and then scroll down to press close",
+
+   "submission.sections.describe.relationship-lookup.title.isProtocolOfInstrument": "Select instrument records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProtocolOfInstrument": "Tick the box and then scroll down to press close",
+
+   "123456789/6.search.results.head": "Search Software",
+   "submission.sections.describe.relationship-lookup.title.isProtocolOfSoftware": "Select software records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isProtocolOfSoftware": "Tick the box and then scroll down to press close",
+
+   "123456789/5.search.results.head": "Search Method",
+   "submission.sections.describe.relationship-lookup.title.isReferenceForMethod": "Select method records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isReferenceForMethod": "Tick the box and then scroll down to press close",
+
+   "123456789/19.search.results.head": "Search Author",
+   "submission.sections.describe.relationship-lookup.title.isRelatedWorkOfResearcher": "Select person records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isRelatedWorkOfResearcher": "Tick the box and then scroll down to press close",
+
+   "123456789/33.search.results.head": "Search Publication",
+   "submission.sections.describe.relationship-lookup.title.producesPublication": "Select publication records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.producesPublication": "Tick the box and then scroll down to press close",
 }
