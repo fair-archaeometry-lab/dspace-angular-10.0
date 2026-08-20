@@ -8185,4 +8185,6 @@
   "submission.sections.describe.relationship-lookup.title.producesPublication": "Select publication records in the system",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.producesPublication": "Tick the box and then scroll down to press close",
+
+  "search.filters.filter.publisher.head": "Publisher",
 }

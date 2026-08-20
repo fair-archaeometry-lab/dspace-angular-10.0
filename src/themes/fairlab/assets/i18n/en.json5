@@ -134,7 +134,10 @@
    "search.filters.filter.institutionName.head": "Institution Name",
    "search.filters.filter.institutionType.head": "Institution Type",
  
-            // collection item labels
+   "search.filters.filter.publisher.head": "Publisher",
+
+    
+    // collection item labels
 
    "service.listelement.badge": "Service",
    "instrument.listelement.badge": "Instrument",
