@@ -1,0 +1,30 @@
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { DSONameService } from '@dspace/core/breadcrumbs/dso-name.service';
+import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
+
+import { ItemMetadataRepresentationListElementComponent } from '../../../../../../../app/shared/object-list/metadata-representation-list-element/item/item-metadata-representation-list-element.component';
+import { TruncatableComponent } from '../../../../../../../app/shared/truncatable/truncatable.component';
+
+@Component({
+    selector: 'ds-instrument-item-metadata-list-element',
+    templateUrl: './instrument-item-metadata-list-element.component.html',
+    imports: [
+        NgbTooltip,
+        RouterLink,
+        TruncatableComponent,
+    ],
+})
+/**
+ * The component for displaying an item of the type Instrument
+ * as a metadata field.
+ */
+export class InstrumentItemMetadataListElementComponent
+    extends ItemMetadataRepresentationListElementComponent {
+
+    constructor(
+        public dsoNameService: DSONameService,
+    ) {
+        super();
+    }
+}

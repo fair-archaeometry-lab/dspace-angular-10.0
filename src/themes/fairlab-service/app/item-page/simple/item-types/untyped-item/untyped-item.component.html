@@ -1,6 +1,7 @@
 @if (showBackButton$ | async) {
 <ds-results-back-button [back]="back"></ds-results-back-button>
 }
+
 @if (iiifEnabled) {
 <div class="row">
   <div class="col-12">
@@ -10,85 +11,240 @@
 </div>
 }
 
-<div class="d-flex flex-row">
-  <ds-item-page-title-field [item]="object" class="me-auto">
-  </ds-item-page-title-field>
-  <ds-dso-edit-menu></ds-dso-edit-menu>
-</div>
-<div class="row">
-  <div class="col-12 col-md-4">
-    @if (!(mediaViewer.image || mediaViewer.video)) {
-    <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
-      <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
-    </ds-metadata-field-wrapper>
-    }
-    @if (mediaViewer.image || mediaViewer.video) {
-    <div class="mb-2">
-      <ds-media-viewer [item]="object"></ds-media-viewer>
-    </div>
-    }
-    @if (showDownloadLinkAsAttachment !== true) {
-    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
-    }
-    <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
-    <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object" [itemType]="'Person'"
-      [metadataFields]="['dc.contributor.author', 'dc.creator']" [label]="'item.page.authors' | translate">
-    </ds-metadata-representation-list>
-    <ds-generic-item-page-field [item]="object" [fields]="['service.operatingLanguage']" [separator]="','"
-      [label]="'service.page.operating-language'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['journal.title']" [label]="'item.page.journal-title'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['journal.identifier.issn']"
-      [label]="'item.page.journal-issn'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['journalvolume.identifier.name']"
-      [label]="'item.page.volume-title'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.publisher']" [label]="'item.page.publisher'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.doi', 'dc.relation.hasversion']"
-      [label]="'item.page.doi'" urlRegex="^https?://">
-    </ds-generic-item-page-field>
-  </div>
-  <div class="col-12 col-md-6">
-    @if (showDownloadLinkAsAttachment) {
-    <ds-item-page-attachment-section [item]="object"></ds-item-page-attachment-section>
-    }
-    <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.description']" [label]="'item.page.description'">
-    </ds-generic-item-page-field>
+<!-- HERO SECTION: 3 COLUMNS -->
+<div class="container hero-section py-3">
+  <div class="row">
 
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.subject']" [separator]="', '"
-      [label]="'item.page.subject'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.citation']" [label]="'item.page.citation'">
-    </ds-generic-item-page-field>
-    @if (geospatialItemPageFieldsEnabled) {
-    <ds-geospatial-item-page-field [item]="object" [label]="'item.page.places'" [pointFields]="['dcterms.spatial']"
-      [bboxFields]="['dcterms.spatial']" [cluster]="true">
-    </ds-geospatial-item-page-field>
-    }
-    <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
-    </ds-item-page-uri-field>
-    <ds-item-page-collections [item]="object"></ds-item-page-collections>
-    <ds-item-page-uri-field [item]="object" [fields]="['coar.notify.endorsedBy']" [label]="'item.page.endorsement'">
-    </ds-item-page-uri-field>
-    <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isReviewedBy']" [label]="'item.page.review'">
-    </ds-item-page-uri-field>
-    <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isSupplementedBy']"
-      [label]="'item.page.supplemented'">
-    </ds-item-page-uri-field>
-    <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isReferencedBy']"
-      [label]="'item.page.referenced'">
-    </ds-item-page-uri-field>
-    <ds-item-page-license-field [item]="object">
-    </ds-item-page-license-field>
-    <div>
-      <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" role="button"
-        tabindex="0">
-        <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
-      </a>
+    <!-- HERO LEFT: THUMBNAIL / MEDIA VIEWER -->
+    <div class="col-12 col-md-3">
+      @if (!(mediaViewer.image || mediaViewer.video)) {
+      <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+        <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
+      </ds-metadata-field-wrapper>
+      }
+      @if (mediaViewer.image || mediaViewer.video) {
+      <div class="mb-2">
+        <ds-media-viewer [item]="object"></ds-media-viewer>
+      </div>
+      }
+    </div>
+
+    <!-- HERO MIDDLE: TITLE + SOCIAL SHARE -->
+    <div class="col-12 col-md-6">
+      <div class="d-flex flex-row">
+        <ds-item-page-title-field [item]="object" class="me-auto">
+        </ds-item-page-title-field>
+        <ds-dso-edit-menu></ds-dso-edit-menu>
+      </div>
+
+      <!-- Optional subtitle, if you have one -->
+      <!--
+      <h3 class="mt-2 fw-bold" *ngIf="object?.metadata?.['dc.title.alternative']">
+        {{ object.metadata['dc.title.alternative'][0].value }}
+      </h3>
+      -->
+
+      <!-- Social media / mail buttons with simple links -->
+      <div class="d-flex flex-row flex-wrap mt-3 gap-2">
+        <!-- Twitter login -->
+        <a class="btn btn-outline-dark btn-sm" href="https://twitter.com/login" target="_blank"
+          rel="noopener noreferrer" aria-label="Twitter login">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+        <!-- Facebook login -->
+        <a class="btn btn-outline-primary btn-sm" href="https://www.facebook.com/login" target="_blank"
+          rel="noopener noreferrer" aria-label="Facebook login">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- LinkedIn login -->
+        <a class="btn btn-outline-info btn-sm" href="https://www.linkedin.com/login" target="_blank"
+          rel="noopener noreferrer" aria-label="LinkedIn login">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <!-- Outlook / email -->
+        <a class="btn btn-outline-secondary btn-sm"
+          href="mailto:?subject=Service%20information&body=Please%20see%20this%20service%20page."
+          aria-label="Send email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- HERO RIGHT: ATTACHMENT DOWNLOAD BUTTONS -->
+    <div class="col-12 col-md-3">
+      @if (showDownloadLinkAsAttachment) {
+      <!-- Attachment-style buttons, possibly many -->
+      <ds-item-page-attachment-section [item]="object"></ds-item-page-attachment-section>
+      }
+      @if (!showDownloadLinkAsAttachment) {
+      <!-- Standard file section if not using attachment style -->
+      <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+      }
+    </div>
+
+  </div>
+</div>
+<!-- /HERO SECTION -->
+
+<!-- METADATA GRID SECTION: 3 COLUMNS -->
+<div class="container mt-4">
+  <div class="row">
+
+    <!-- METADATA COLUMN 1: creation, readiness, language, contacts, authors -->
+    <div class="col-12 col-md-4 mb-4">
+      <!-- service.creationDate -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.creationDate']"
+        [label]="'service.page.creation-date'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.readinessLevel -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.readinessLevel']"
+        [label]="'service.page.readiness-level'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.operatingLanguage (multiple) -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.operatingLanguage']" [separator]="', '"
+        [label]="'service.page.operating-language'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.contact.contact -->
+      <ds-item-page-uri-field [item]="object" [fields]="['service.contact.contact']" [label]="'service.page.contact'">
+      </ds-item-page-uri-field>
+      <hr class="my-2">
+
+      <!-- ror.names.value -->
+      <ds-generic-item-page-field [item]="object" [fields]="['ror.names.value']" [separator]="'; '"
+        [label]="'service.page.organisation'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- dc.contributor.author (multiple) -->
+      <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object"
+        [itemType]="'Person'" [metadataFields]="['dc.contributor.author', 'dc.creator']"
+        [label]="'item.page.authors' | translate">
+      </ds-metadata-representation-list>
+      <hr class="my-2">
+    </div>
+
+    <!-- METADATA COLUMN 2: URIs, links, abstract, keywords, collections, full view -->
+    <div class="col-12 col-md-4 mb-4">
+      <!-- dc.identifier.uri -->
+      <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+      </ds-item-page-uri-field>
+      <hr class="my-2">
+
+      <!-- service.link (multiple) directly under URI (first representation) -->
+      <ds-item-page-uri-field [item]="object" [fields]="['service.link.website']" [separator]="' | '"
+        [label]="'service.page.links'">
+      </ds-item-page-uri-field>
+      <hr class="my-2">
+
+      <!-- dc.description.abstract -->
+      <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
+      <hr class="my-2">
+
+      <!-- service.keyword -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.keyword']" [separator]="', '"
+        [label]="'service.page.keywords'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- Collections moved here under service.keyword -->
+      <ds-item-page-collections [item]="object"></ds-item-page-collections>
+      <hr class="my-2">
+
+      <!-- Full item page button -->
+      <div class="mt-2">
+        <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
+          <i class="fas fa-info-circle"></i>
+          {{ 'item.page.link.full' | translate }}
+        </a>
+      </div>
+    </div>
+
+    <!-- METADATA COLUMN 3: disciplines, techniques, measurable properties, costs -->
+    <div class="col-12 col-md-4 mb-4">
+      <!-- service.researchDiscipline (multiple) -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.researchDiscipline']" [separator]="', '"
+        [label]="'service.page.research-discipline'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.technique (multiple) -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.technique']" [separator]="', '"
+        [label]="'service.page.techniques'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.measurableProperty.class (multiple) -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.measurableProperty.class']" [separator]="', '"
+        [label]="'service.page.measurable-property-class'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.measurableProperty.material (multiple) -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.measurableProperty.material']" [separator]="', '"
+        [label]="'service.page.measurable-property-material'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.cost.accessUnit -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.cost.accessUnit']"
+        [label]="'service.page.cost-access-unit'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.cost.accessUnitCost -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.cost.accessUnitCost']"
+        [label]="'service.page.cost-access-unit-cost'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+
+      <!-- service.cost.currency -->
+      <ds-generic-item-page-field [item]="object" [fields]="['service.cost.currency']"
+        [label]="'service.page.cost-currency'">
+      </ds-generic-item-page-field>
+      <hr class="my-2">
+    </div>
+
+  </div>
+</div>
+<!-- /METADATA GRID SECTION -->
+
+<!-- OPTIONAL GEOSPATIAL + LICENSE + OTHER LINKS (kept intact, now without Collections) -->
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      @if (geospatialItemPageFieldsEnabled) {
+      <ds-geospatial-item-page-field [item]="object" [label]="'item.page.places'" [pointFields]="['dcterms.spatial']"
+        [bboxFields]="['dcterms.spatial']" [cluster]="true">
+      </ds-geospatial-item-page-field>
+      }
+
+      <!-- Endorsement / review / supplemented / referenced links -->
+      <ds-item-page-uri-field [item]="object" [fields]="['coar.notify.endorsedBy']" [label]="'item.page.endorsement'">
+      </ds-item-page-uri-field>
+
+      <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isReviewedBy']"
+        [label]="'item.page.review'">
+      </ds-item-page-uri-field>
+
+      <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isSupplementedBy']"
+        [label]="'item.page.supplemented'">
+      </ds-item-page-uri-field>
+
+      <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isReferencedBy']"
+        [label]="'item.page.referenced'">
+      </ds-item-page-uri-field>
+
+      <ds-item-page-license-field [item]="object">
+      </ds-item-page-license-field>
     </div>
   </div>
 </div>
