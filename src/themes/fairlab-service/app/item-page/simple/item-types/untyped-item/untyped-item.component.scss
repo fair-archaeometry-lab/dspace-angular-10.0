@@ -1,32 +1,4 @@
 /* ================================
-   Base typography & body styling
-   ================================ */
-
-body {
-    margin: 0;
-    font-family: Open Sans, Regular, -apple-system, BlinkMacSystemFont,
-        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-}
-
-/* Ensure item page content inherits base font cleanly */
-.item-page,
-.ds-item-page,
-.hero-section,
-.metadata-grid {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #212529;
-}
-
-
-/* ================================
    Hero section (thumbnail + title + share + attachments)
    ================================ */
 
@@ -98,16 +70,17 @@ body {
    Metadata titles & values
    ================================ */
 
-/* Titles (labels) for metadata blocks */
-.simple-view-element-header,
-.ds-item-page-metadata-title,
-ds-generic-item-page-field h5,
-ds-item-page-uri-field h5,
-ds-item-page-collections h5 {
-    color: var(--ds-item-page-metadata-title-color);
+/* Local override: metadata titles (labels) on this item page */
+:host ::ng-deep .simple-view-element-header,
+:host ::ng-deep .ds-item-page-metadata-title,
+:host ::ng-deep ds-generic-item-page-field h5,
+:host ::ng-deep ds-item-page-uri-field h5,
+:host ::ng-deep ds-item-page-collections h5 {
+    color: #116AAB;
+    /* choose any valid color: hex, rgb, or named */
     display: block;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 1rem !important;
     margin-bottom: 0 !important;
 }
 
@@ -117,8 +90,8 @@ ds-item-page-collections h5 {
 ds-generic-item-page-field .simple-view-element-body,
 ds-item-page-uri-field .simple-view-element-body,
 ds-item-page-collections .simple-view-element-body {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.875rem;
+    font-weight: 300;
     color: #212529;
 }
 
@@ -152,9 +125,11 @@ ds-item-page-collections .simple-view-element-body {
 /* Horizontal rule as “underscore” under each entry */
 hr.my-2 {
     border: 0;
-    border-bottom: 1.5px solid #000000;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    border-bottom-style: solid;
+    border-bottom-width: 1.7px;
+    border-bottom-color: #000000;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
 /* Make anchors in metadata blocks look like normal text links */
@@ -204,21 +179,4 @@ ds-geospatial-item-page-field {
 
 ds-item-page-license-field {
     margin-top: 1rem;
-}
-
-
-/* ================================
-   Breadcrumb & item-page container tweaks
-   ================================ */
-
-/* Slight tweak to breadcrumb to match FAO spacing */
-.nav-breadcrumb .breadcrumb {
-    margin-bottom: 0.5rem;
-}
-
-/* Main item-page container padding */
-.item-page,
-.ds-item-page {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
 }
