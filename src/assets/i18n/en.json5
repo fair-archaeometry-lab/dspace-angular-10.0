@@ -8215,4 +8215,26 @@
   "service.page.cost-currency": "Currency",
 
   "service.page.research-discipline": "Research Discipline",
+
+  "instrument.page.commissioned-date": "Commissioned Date",
+
+  "instrument.page.identifier": "Exisiting Identifier",
+
+  "instrument.page.open-access": "Open Access",
+
+  "instrument.page.owner": "Owner",
+
+  "instrument.page.contact": "Contact",
+
+  "instrument.page.links": "Landing Page",
+
+  "instrument.page.instrument-type": "Instrument Type",
+
+  "instrument.page.manufacturer": "Manufacturer",
+
+  "instrument.page.model": "Model",
+
+  "instrument.page.variable": "Measured Variables",
+
+  "instrument.page.impact": "Impact on Samples",
 }

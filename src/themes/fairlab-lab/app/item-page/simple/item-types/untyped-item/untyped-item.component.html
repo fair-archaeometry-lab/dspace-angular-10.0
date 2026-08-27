@@ -1,0 +1,216 @@
+<div class="container mt-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      @if (showBackButton$ | async) {
+      <ds-results-back-button [back]="back"></ds-results-back-button>
+      }
+    </div>
+
+    <div>
+      <ds-dso-edit-menu></ds-dso-edit-menu>
+    </div>
+  </div>
+</div>
+
+@if (iiifEnabled) {
+<div class="row">
+  <div class="col-12">
+    <ds-mirador-viewer id="iiif-viewer" [object]="object" [searchable]="iiifSearchEnabled" [query]="iiifQuery$ | async">
+    </ds-mirador-viewer>
+  </div>
+</div>
+}
+
+<!-- HERO: thumbnail | title/social | files -->
+<div class="container hero-section py-3">
+  <div class="row">
+
+    <div class="col-12 col-md-3">
+      @if (!(mediaViewer.image || mediaViewer.video)) {
+      <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+        <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
+      </ds-metadata-field-wrapper>
+      }
+
+      @if (mediaViewer.image || mediaViewer.video) {
+      <div class="mb-2">
+        <ds-media-viewer [item]="object"></ds-media-viewer>
+      </div>
+      }
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="d-flex flex-row">
+        <ds-item-page-title-field [item]="object" class="me-auto">
+        </ds-item-page-title-field>
+      </div>
+
+      <div class="d-flex flex-row flex-wrap mt-3 gap-2">
+        <a class="btn btn-outline-dark btn-sm" href="https://twitter.com/login" target="_blank"
+          rel="noopener noreferrer" aria-label="Twitter login">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+        <a class="btn btn-outline-primary btn-sm" href="https://www.facebook.com/login" target="_blank"
+          rel="noopener noreferrer" aria-label="Facebook login">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a class="btn btn-outline-info btn-sm" href="https://www.linkedin.com/login" target="_blank"
+          rel="noopener noreferrer" aria-label="LinkedIn login">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a class="btn btn-outline-secondary btn-sm"
+          href="mailto:?subject=Laboratory%20information&body=Please%20see%20this%20laboratory%20page."
+          aria-label="Send email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3">
+      @if (showDownloadLinkAsAttachment) {
+      <ds-item-page-attachment-section [item]="object">
+      </ds-item-page-attachment-section>
+      }
+
+      @if (!showDownloadLinkAsAttachment) {
+      <ds-item-page-file-section [item]="object">
+      </ds-item-page-file-section>
+      }
+    </div>
+
+  </div>
+</div>
+
+<!-- METADATA: two information columns + map -->
+<div class="container mt-4 metadata-grid">
+  <div class="row">
+
+    <!-- LEFT COLUMN -->
+    <div class="col-12 col-md-4 mb-4">
+
+      @if (object?.metadata?.['ror.established']?.length) {
+      <ds-generic-item-page-field [item]="object" [fields]="['ror.established']" [label]="'lab.page.established'">
+      </ds-generic-item-page-field>
+      <hr class="metadata-separator">
+      }
+
+      @if (object?.metadata?.['dc.identifier']?.length) {
+      <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier']" [separator]="', '"
+        [label]="'lab.page.identifier'">
+      </ds-item-page-uri-field>
+      <hr class="metadata-separator">
+      }
+
+      @if (object?.metadata?.['ror.externalIds.all']?.length) {
+      <ds-item-page-uri-field [item]="object" [fields]="['ror.externalIds.all']" [separator]="', '"
+        [label]="'lab.page.external-ids'">
+      </ds-item-page-uri-field>
+      <hr class="metadata-separator">
+      }
+
+      @if (object?.metadata?.['ror.relationships.label']?.length) {
+      <ds-generic-item-page-field [item]="object" [fields]="['ror.relationships.label']" [separator]="', '"
+        [label]="'lab.page.relationships'">
+      </ds-generic-item-page-field>
+      <hr class="metadata-separator">
+      }
+
+      @if (object?.metadata?.['ror.locations.countryName']?.length) {
+      <ds-generic-item-page-field [item]="object" [fields]="['ror.locations.countryName']" [separator]="', '"
+        [label]="'lab.page.country'">
+      </ds-generic-item-page-field>
+      <hr class="metadata-separator">
+      }
+
+    </div>
+
+    <!-- MIDDLE COLUMN -->
+    <div class="col-12 col-md-4 mb-4">
+
+      @if (object?.metadata?.['dc.identifier.uri']?.length) {
+      <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+      </ds-item-page-uri-field>
+      <hr class="metadata-separator">
+      }
+
+      @if (object?.metadata?.['ror.links.value']?.length) {
+      <ds-item-page-uri-field [item]="object" [fields]="['ror.links.value']" [separator]="' | '"
+        [label]="'lab.page.links'">
+      </ds-item-page-uri-field>
+      <hr class="metadata-separator">
+      }
+
+      @if (object?.metadata?.['ror.types']?.length) {
+      <ds-generic-item-page-field [item]="object" [fields]="['ror.types']" [separator]="', '"
+        [label]="'lab.page.types'">
+      </ds-generic-item-page-field>
+      <hr class="metadata-separator">
+      }
+
+      @if (object?.metadata?.['ror.role']?.length) {
+      <ds-generic-item-page-field [item]="object" [fields]="['ror.role']" [separator]="', '" [label]="'lab.page.role'">
+      </ds-generic-item-page-field>
+      <hr class="metadata-separator">
+      }
+
+      <ds-item-page-collections [item]="object">
+      </ds-item-page-collections>
+
+      <div class="mt-2">
+        <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
+          <i class="fas fa-info-circle"></i>
+          {{ 'item.page.link.full' | translate }}
+        </a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: map -->
+    <div class="col-12 col-md-4 mb-4 lab-map-column">
+      @if (geospatialItemPageFieldsEnabled) {
+      <ds-geospatial-item-page-field [item]="object" [label]="'item.page.places'" [pointFields]="['dcterms.spatial']"
+        [bboxFields]="['dcterms.spatial']" [cluster]="true">
+      </ds-geospatial-item-page-field>
+      }
+    </div>
+
+  </div>
+</div>
+
+<!-- OTHER ITEM RELATION FIELDS -->
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+
+      @if (object?.metadata?.['coar.notify.endorsedBy']?.length) {
+      <ds-item-page-uri-field [item]="object" [fields]="['coar.notify.endorsedBy']" [label]="'item.page.endorsement'">
+      </ds-item-page-uri-field>
+      }
+
+      @if (object?.metadata?.['datacite.relation.isReviewedBy']?.length) {
+      <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isReviewedBy']"
+        [label]="'item.page.review'">
+      </ds-item-page-uri-field>
+      }
+
+      @if (object?.metadata?.['datacite.relation.isSupplementedBy']?.length) {
+      <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isSupplementedBy']"
+        [label]="'item.page.supplemented'">
+      </ds-item-page-uri-field>
+      }
+
+      @if (object?.metadata?.['datacite.relation.isReferencedBy']?.length) {
+      <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isReferencedBy']"
+        [label]="'item.page.referenced'">
+      </ds-item-page-uri-field>
+      }
+
+      <ds-item-page-license-field [item]="object">
+      </ds-item-page-license-field>
+
+    </div>
+  </div>
+</div>

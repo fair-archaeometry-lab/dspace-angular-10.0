@@ -1,0 +1,194 @@
+/* ================================
+   Hero section (thumbnail + title + share + attachments)
+   ================================ */
+
+.hero-section {
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #cfd4da;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.10);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Reduce horizontal gutters and align columns vertically */
+.hero-section .row {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 0.5rem;
+    align-items: center;
+}
+
+/* Slightly reduce column internal padding */
+.hero-section .row>div {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Thumbnail box */
+.item-page-thumbnail-container .thumbnail,
+.hero-section .thumbnail {
+    border: 1px solid #dee2e6;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: #fdfdfd;
+}
+
+/* Title line */
+.hero-section h2,
+.hero-section .ds-item-page-title-field {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+/* Social buttons */
+.hero-section .btn.btn-sm {
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.6rem;
+}
+
+/* Attachments / file section */
+.hero-section ds-item-page-attachment-section,
+.hero-section ds-item-page-file-section {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* ================================
+   Metadata titles & values
+   ================================ */
+
+/* Metadata labels */
+:host ::ng-deep .simple-view-element-header,
+:host ::ng-deep .ds-item-page-metadata-title,
+:host ::ng-deep ds-generic-item-page-field h5,
+:host ::ng-deep ds-item-page-uri-field h5,
+:host ::ng-deep ds-item-page-collections h5 {
+    color: #116aab;
+    display: block;
+    font-weight: 600;
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* Metadata values */
+:host ::ng-deep .simple-view-element-body,
+:host ::ng-deep .ds-item-page-metadata-value,
+:host ::ng-deep ds-generic-item-page-field .simple-view-element-body,
+:host ::ng-deep ds-item-page-uri-field .simple-view-element-body,
+:host ::ng-deep ds-item-page-collections .simple-view-element-body {
+    font-size: 1rem !important;
+    font-weight: 300;
+    color: #212529;
+}
+
+/* Lists inside metadata values */
+:host ::ng-deep .simple-view-element-body ul,
+:host ::ng-deep .simple-view-element-body li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ================================
+   Metadata grid (3 columns)
+   ================================ */
+
+.metadata-grid {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    /* Prevent the map from extending outside this white card */
+    overflow: hidden;
+}
+
+/* Column spacing */
+.metadata-grid .col-12.col-md-4 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* Separators that appear only in a true @if block */
+.metadata-grid .metadata-separator {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    opacity: 1;
+}
+
+/* Metadata links */
+.metadata-grid a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.metadata-grid a:hover,
+.metadata-grid a:focus {
+    text-decoration: underline;
+}
+
+/* ================================
+   Collections & abstract blocks
+   ================================ */
+
+:host ::ng-deep ds-item-page-collections .simple-view-element-header {
+    margin-top: 0.5rem;
+}
+
+:host ::ng-deep ds-item-page-collections .simple-view-element-body a {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+:host ::ng-deep ds-item-page-abstract-field .simple-view-element-header {
+    margin-top: 0.5rem;
+}
+
+:host ::ng-deep ds-item-page-abstract-field .simple-view-element-body {
+    margin-top: 0.25rem;
+}
+
+/* ================================
+   Geospatial map & license section
+   ================================ */
+
+/* The Lab HTML map column has class="lab-map-column" */
+.lab-map-column {
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* Constrain the DSpace geospatial component to its Bootstrap column */
+.lab-map-column ds-geospatial-item-page-field {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Constrain the actual map containers generated inside DSpace */
+:host ::ng-deep .lab-map-column .leaflet-container,
+:host ::ng-deep .lab-map-column .leaflet-map,
+:host ::ng-deep .lab-map-column .map-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* Normal standalone geospatial field behavior */
+ds-geospatial-item-page-field {
+    display: block;
+    margin-top: 1rem;
+}
+
+ds-item-page-license-field {
+    margin-top: 1rem;
+}
