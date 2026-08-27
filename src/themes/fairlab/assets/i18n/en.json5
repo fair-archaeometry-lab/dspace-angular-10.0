@@ -216,5 +216,23 @@
 
    "123456789/33.search.results.head": "Search Publication",
    "submission.sections.describe.relationship-lookup.title.producesPublication": "Select publication records in the system",
-   "submission.sections.describe.relationship-lookup.search-tab.tab-title.producesPublication": "Tick the box and then scroll down to press close",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.producesPublication": "Please tick the box and then scroll down to press close",
+
+   // translate service simple item page
+
+   "service.page.creation-date": "Esalished Date of Service",
+   "service.page.readiness-level": "Readiness Level",
+   "service.page.operating-language": "Service Language",
+   "service.page.contact": "Contact Email",
+   "service.page.organisation": "Service Provider",
+   "service.page.links": "Landing Page or Related Links",
+   "service.page.keywords": "Keywords",
+   "service.page.techniques": "Analytical Technique",
+   "service.page.measurable-property-class": "Class of Measurable Property",
+   "service.page.measurable-property-material": "Measurable Material",
+   "service.page.cost-access-unit": "Charged by",
+   "service.page.cost-access-unit-cost": "Cost",
+   "service.page.cost-currency": "Currency",
+   "service.page.research-discipline": "Research Discipline", 
+
 }

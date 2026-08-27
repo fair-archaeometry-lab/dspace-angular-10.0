@@ -122,14 +122,14 @@ ds-item-page-collections .simple-view-element-body {
     padding-left: 1rem;
 }
 
-/* Horizontal rule as “underscore” under each entry */
-hr.my-2 {
+/* Separator created only when its @if metadata condition is true */
+
+.metadata-grid .metadata-separator {
     border: 0;
-    border-bottom-style: solid;
-    border-bottom-width: 1.7px;
-    border-bottom-color: #000000;
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+    border-top: 1px solid #000000;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    opacity: 1;
 }
 
 /* Make anchors in metadata blocks look like normal text links */
