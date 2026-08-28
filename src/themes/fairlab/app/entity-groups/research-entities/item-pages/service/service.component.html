@@ -1,0 +1,278 @@
+<div class="container mt-3">
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            @if (showBackButton$ | async) {
+            <ds-results-back-button [back]="back"></ds-results-back-button>
+            }
+        </div>
+        <div>
+            <ds-dso-edit-menu></ds-dso-edit-menu>
+        </div>
+    </div>
+</div>
+
+@if (iiifEnabled) {
+<div class="row">
+    <div class="col-12">
+        <ds-mirador-viewer id="iiif-viewer" [object]="object" [searchable]="iiifSearchEnabled"
+            [query]="iiifQuery$ | async">
+        </ds-mirador-viewer>
+    </div>
+</div>
+}
+
+<!-- HERO SECTION -->
+<div class="container hero-section py-3">
+    <div class="row">
+
+        <div class="col-12 col-md-3">
+            @if (!(mediaViewer.image || mediaViewer.video)) {
+            <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
+                <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
+            </ds-metadata-field-wrapper>
+            }
+
+            @if (mediaViewer.image || mediaViewer.video) {
+            <div class="mb-2">
+                <ds-media-viewer [item]="object"></ds-media-viewer>
+            </div>
+            }
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="d-flex flex-row">
+                <ds-item-page-title-field [item]="object" class="me-auto">
+                </ds-item-page-title-field>
+            </div>
+
+            <div class="d-flex flex-row flex-wrap mt-3 gap-2">
+                <a class="btn btn-outline-dark btn-sm" href="https://twitter.com/login" target="_blank"
+                    rel="noopener noreferrer" aria-label="Twitter login">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="btn btn-outline-primary btn-sm" href="https://www.facebook.com/login" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook login">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a class="btn btn-outline-info btn-sm" href="https://www.linkedin.com/login" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn login">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a class="btn btn-outline-secondary btn-sm"
+                    href="mailto:?subject=Service%20information&body=Please%20see%20this%20service%20page."
+                    aria-label="Send email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+            @if (showDownloadLinkAsAttachment) {
+            <ds-item-page-attachment-section [item]="object">
+            </ds-item-page-attachment-section>
+            }
+
+            @if (!showDownloadLinkAsAttachment) {
+            <ds-item-page-file-section [item]="object">
+            </ds-item-page-file-section>
+            }
+        </div>
+
+    </div>
+</div>
+
+<!-- METADATA GRID -->
+<div class="container mt-4 metadata-grid">
+    <div class="row">
+
+        <!-- COLUMN 1 -->
+        <div class="col-12 col-md-4 mb-4">
+
+            @if (object?.metadata?.['service.creationDate']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.creationDate']"
+                [label]="'service.page.creation-date'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.readinessLevel']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.readinessLevel']"
+                [label]="'service.page.readiness-level'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.operatingLanguage']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.operatingLanguage']" [separator]="', '"
+                [label]="'service.page.operating-language'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.contact.contact']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['service.contact.contact']"
+                [label]="'service.page.contact'">
+            </ds-item-page-uri-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['ror.names.value']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['ror.names.value']" [separator]="'; '"
+                [label]="'service.page.organisation'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['dc.contributor.author']?.length || object?.metadata?.['dc.creator']?.length) {
+            <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object"
+                [itemType]="'Person'" [metadataFields]="['dc.contributor.author', 'dc.creator']"
+                [label]="'item.page.authors' | translate">
+            </ds-metadata-representation-list>
+            <hr class="metadata-separator">
+            }
+
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div class="col-12 col-md-4 mb-4">
+
+            @if (object?.metadata?.['dc.identifier.uri']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+            </ds-item-page-uri-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.link.website']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['service.link.website']" [separator]="' | '"
+                [label]="'service.page.links'">
+            </ds-item-page-uri-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['dc.description.abstract']?.length) {
+            <ds-item-page-abstract-field [item]="object">
+            </ds-item-page-abstract-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.keyword']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.keyword']" [separator]="', '"
+                [label]="'service.page.keywords'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            <!-- Collections should always display if the item belongs to a collection -->
+            <ds-item-page-collections [item]="object">
+            </ds-item-page-collections>
+
+            <div class="mt-2">
+                <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
+                    <i class="fas fa-info-circle"></i>
+                    {{ 'item.page.link.full' | translate }}
+                </a>
+            </div>
+
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div class="col-12 col-md-4 mb-4">
+
+            @if (object?.metadata?.['service.researchDiscipline']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.researchDiscipline']" [separator]="', '"
+                [label]="'service.page.research-discipline'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.technique']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.technique']" [separator]="', '"
+                [label]="'service.page.techniques'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.measurableProperty.class']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.measurableProperty.class']"
+                [separator]="', '" [label]="'service.page.measurable-property-class'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.measurableProperty.material']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.measurableProperty.material']"
+                [separator]="', '" [label]="'service.page.measurable-property-material'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.cost.accessUnit']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.cost.accessUnit']"
+                [label]="'service.page.cost-access-unit'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.cost.accessUnitCost']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.cost.accessUnitCost']"
+                [label]="'service.page.cost-access-unit-cost'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['service.cost.currency']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['service.cost.currency']"
+                [label]="'service.page.cost-currency'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+        </div>
+
+    </div>
+</div>
+
+<!-- OPTIONAL FIELDS -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+
+            @if (geospatialItemPageFieldsEnabled) {
+            <ds-geospatial-item-page-field [item]="object" [label]="'item.page.places'"
+                [pointFields]="['dcterms.spatial']" [bboxFields]="['dcterms.spatial']" [cluster]="true">
+            </ds-geospatial-item-page-field>
+            }
+
+            @if (object?.metadata?.['coar.notify.endorsedBy']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['coar.notify.endorsedBy']"
+                [label]="'item.page.endorsement'">
+            </ds-item-page-uri-field>
+            }
+
+            @if (object?.metadata?.['datacite.relation.isReviewedBy']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isReviewedBy']"
+                [label]="'item.page.review'">
+            </ds-item-page-uri-field>
+            }
+
+            @if (object?.metadata?.['datacite.relation.isSupplementedBy']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isSupplementedBy']"
+                [label]="'item.page.supplemented'">
+            </ds-item-page-uri-field>
+            }
+
+            @if (object?.metadata?.['datacite.relation.isReferencedBy']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['datacite.relation.isReferencedBy']"
+                [label]="'item.page.referenced'">
+            </ds-item-page-uri-field>
+            }
+
+            <ds-item-page-license-field [item]="object">
+            </ds-item-page-license-field>
+
+        </div>
+    </div>
+</div>

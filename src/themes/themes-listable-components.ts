@@ -1,22 +1,22 @@
 // import { LISTABLE_COMPONENTS as CUSTOM_THEME_LISTABLE_COMPONENTS } from './custom/lazy-listable-components';
 import { LISTABLE_COMPONENTS as FAIRLAB_THEME_LISTABLE_COMPONENTS } from './fairlab/lazy-listable-components';
-import { LISTABLE_COMPONENTS as FAIRLAB_SERVICE_LISTABLE_COMPONENTS } from './fairlab-service/lazy-listable-components';
-import { LISTABLE_COMPONENTS as FAIRLAB_INSTRUMENT_LISTABLE_COMPONENTS } from './fairlab-instrument/lazy-listable-components';
-import { LISTABLE_COMPONENTS as FAIRLAB_LAB_LISTABLE_COMPONENTS } from './fairlab-lab/lazy-listable-components';
-import { LISTABLE_COMPONENTS as FAIRLAB_SOFTWARE_LISTABLE_COMPONENTS } from './fairlab-software/lazy-listable-components';
-import { LISTABLE_COMPONENTS as FAIRLAB_METHOD_LISTABLE_COMPONENTS } from './fairlab-method/lazy-listable-components';
-import { LISTABLE_COMPONENTS as FAIRLAB_METHOD_REFMATERIAL_COMPONENTS } from './fairlab-refmaterial/lazy-listable-components';
+//import { LISTABLE_COMPONENTS as FAIRLAB_SERVICE_LISTABLE_COMPONENTS } from './fairlab-service/lazy-listable-components';
+//import { LISTABLE_COMPONENTS as FAIRLAB_INSTRUMENT_LISTABLE_COMPONENTS } from './fairlab-instrument/lazy-listable-components';
+//import { LISTABLE_COMPONENTS as FAIRLAB_LAB_LISTABLE_COMPONENTS } from './fairlab-lab/lazy-listable-components';
+//import { LISTABLE_COMPONENTS as FAIRLAB_SOFTWARE_LISTABLE_COMPONENTS } from './fairlab-software/lazy-listable-components';
+//import { LISTABLE_COMPONENTS as FAIRLAB_METHOD_LISTABLE_COMPONENTS } from './fairlab-method/lazy-listable-components';
+//import { LISTABLE_COMPONENTS as FAIRLAB_METHOD_REFMATERIAL_COMPONENTS } from './fairlab-refmaterial/lazy-listable-components';
 
 // import { LISTABLE_COMPONENTS as DSPACE_THEME_LISTABLE_COMPONENTS } from './dspace/lazy-listable-components';
 
 export const THEME_LISTABLE_COMPONENTS = [
   // ...CUSTOM_THEME_LISTABLE_COMPONENTS,
   ...FAIRLAB_THEME_LISTABLE_COMPONENTS,
-  ...FAIRLAB_SERVICE_LISTABLE_COMPONENTS,
-  ...FAIRLAB_INSTRUMENT_LISTABLE_COMPONENTS,
-  ...FAIRLAB_LAB_LISTABLE_COMPONENTS,
-  ...FAIRLAB_SOFTWARE_LISTABLE_COMPONENTS,
-  ...FAIRLAB_METHOD_LISTABLE_COMPONENTS,
-  ...FAIRLAB_METHOD_REFMATERIAL_COMPONENTS,
+  //...FAIRLAB_SERVICE_LISTABLE_COMPONENTS,
+  //...FAIRLAB_INSTRUMENT_LISTABLE_COMPONENTS,
+  //...FAIRLAB_LAB_LISTABLE_COMPONENTS,
+  //...FAIRLAB_SOFTWARE_LISTABLE_COMPONENTS,
+  //...FAIRLAB_METHOD_LISTABLE_COMPONENTS,
+  //...FAIRLAB_METHOD_REFMATERIAL_COMPONENTS,
   // ...DSPACE_THEME_LISTABLE_COMPONENTS,
 ];
