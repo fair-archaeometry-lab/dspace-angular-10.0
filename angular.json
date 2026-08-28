@@ -50,16 +50,6 @@
                 "bundleName": "base-theme"
               },
               {
-                "input": "src/themes/custom/styles/theme.scss",
-                "inject": false,
-                "bundleName": "custom-theme"
-              },
-              {
-                "input": "src/themes/dspace/styles/theme.scss",
-                "inject": false,
-                "bundleName": "dspace-theme"
-              },
-              {
                 "input": "src/themes/fairlab/styles/theme.scss",
                 "inject": false,
                 "bundleName": "fairlab-theme"
@@ -83,6 +73,11 @@
                 "input": "src/themes/fairlab-software/styles/theme.scss",
                 "inject": false,
                 "bundleName": "fairlab-software-theme"
+              },
+              {
+                "input": "src/themes/fairlab-method/styles/theme.scss",
+                "inject": false,
+                "bundleName": "fairlab-method-theme"
               },
               "node_modules/leaflet/dist/leaflet.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
