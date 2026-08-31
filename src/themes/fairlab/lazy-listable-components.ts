@@ -10,6 +10,7 @@ import { CommunityListElementComponent } from './app/shared/object-list/communit
 import { ItemSearchResultListElementComponent } from './app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component';
 import { PublicationSidebarSearchListElementComponent } from './app/shared/object-list/sidebar-search-list-element/item-types/publication/publication-sidebar-search-list-element.component';
 import { ServiceComponent } from './app/entity-groups/research-entities/item-pages/service/service.component';
+import { InstrumentComponent } from './app/entity-groups/research-entities/item-pages/instrument/instrument.component';
 /**
  * Add components that use the @listableObjectComponent decorator here.
  * This will ensure that the decorators get picked up when the app loads
@@ -27,4 +28,5 @@ export const LISTABLE_COMPONENTS = [
   ItemSearchResultListElementComponent,
   BrowseEntryListElementComponent,
   ServiceComponent,
+  InstrumentComponent,
 ];
