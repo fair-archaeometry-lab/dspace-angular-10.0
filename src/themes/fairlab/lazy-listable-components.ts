@@ -13,6 +13,8 @@ import { ServiceComponent } from './app/entity-groups/research-entities/item-pag
 import { InstrumentComponent } from './app/entity-groups/research-entities/item-pages/instrument/instrument.component';
 import { LabComponent } from './app/entity-groups/research-entities/item-pages/lab/lab.component';
 import { SoftwareComponent } from './app/entity-groups/research-entities/item-pages/software/software.component';
+import { MethodComponent } from './app/entity-groups/research-entities/item-pages/method/method.component';
+import { RefmaterialComponent } from './app/entity-groups/research-entities/item-pages/refmaterial/refmaterial.component';
 /**
  * Add components that use the @listableObjectComponent decorator here.
  * This will ensure that the decorators get picked up when the app loads
@@ -33,4 +35,6 @@ export const LISTABLE_COMPONENTS = [
   InstrumentComponent,
   LabComponent,
   SoftwareComponent,
+  MethodComponent,
+  RefmaterialComponent,
 ];
