@@ -11,6 +11,7 @@ import { ItemSearchResultListElementComponent } from './app/shared/object-list/s
 import { PublicationSidebarSearchListElementComponent } from './app/shared/object-list/sidebar-search-list-element/item-types/publication/publication-sidebar-search-list-element.component';
 import { ServiceComponent } from './app/entity-groups/research-entities/item-pages/service/service.component';
 import { InstrumentComponent } from './app/entity-groups/research-entities/item-pages/instrument/instrument.component';
+import { LabComponent } from './app/entity-groups/research-entities/item-pages/lab/lab.component';
 /**
  * Add components that use the @listableObjectComponent decorator here.
  * This will ensure that the decorators get picked up when the app loads
@@ -29,4 +30,5 @@ export const LISTABLE_COMPONENTS = [
   BrowseEntryListElementComponent,
   ServiceComponent,
   InstrumentComponent,
+  LabComponent,
 ];
