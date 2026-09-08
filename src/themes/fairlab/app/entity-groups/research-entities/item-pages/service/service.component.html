@@ -120,9 +120,9 @@
             }
 
             @if (object?.metadata?.['ror.names.value']?.length) {
-            <ds-generic-item-page-field [item]="object" [fields]="['ror.names.value']" [separator]="'; '"
-                [label]="'service.page.organisation'">
-            </ds-generic-item-page-field>
+            <ds-metadata-representation-list class="ds-item-page-service-provider-field" [parentItem]="object"
+                [itemType]="'Laboratory'" [metadataFields]="['ror.names.value']" [label]="'service.page.organisation'">
+            </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }
 
