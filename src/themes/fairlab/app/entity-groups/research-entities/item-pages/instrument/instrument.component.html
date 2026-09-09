@@ -115,12 +115,20 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['instrument.owner.name']?.length) {
+            @if (object?.metadata?.['dc.contributor.author']?.length || object?.metadata?.['dc.creator']?.length) {
+            <ds-metadata-representation-list class="ds-instrument-item-page-owner-field" [parentItem]="object"
+                [itemType]="'Person'" [metadataFields]="['dc.contributor.author', 'dc.creator']"
+                [label]="'instrument.page.owner' | translate">
+            </ds-metadata-representation-list>
+            <hr class="metadata-separator">
+            }
+
+            <!--             @if (object?.metadata?.['instrument.owner.name']?.length) {
             <ds-generic-item-page-field [item]="object" [fields]="['instrument.owner.name']"
                 [label]="'instrument.page.owner'">
             </ds-generic-item-page-field>
             <hr class="metadata-separator">
-            }
+            } -->
 
             @if (object?.metadata?.['instrument.owner.contact']?.length) {
             <ds-item-page-uri-field [item]="object" [fields]="['instrument.owner.contact']"
@@ -152,6 +160,7 @@
             </ds-item-page-abstract-field>
             <hr class="metadata-separator">
             }
+
 
             <!-- Collections are not a normal metadata field: keep this unconditional -->
             <ds-item-page-collections [item]="object">
