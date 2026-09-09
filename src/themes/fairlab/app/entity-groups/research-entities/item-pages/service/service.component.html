@@ -121,7 +121,8 @@
 
             @if (object?.metadata?.['ror.names.value']?.length) {
             <ds-metadata-representation-list class="ds-item-page-service-provider-field" [parentItem]="object"
-                [itemType]="'Laboratory'" [metadataFields]="['ror.names.value']" [label]="'service.page.organisation'">
+                [itemType]="'Laboratory'" [metadataFields]="['ror.names.value']"
+                [label]="'service.page.provider' | translate">
             </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }
@@ -129,7 +130,7 @@
             @if (object?.metadata?.['dc.contributor.author']?.length || object?.metadata?.['dc.creator']?.length) {
             <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object"
                 [itemType]="'Person'" [metadataFields]="['dc.contributor.author', 'dc.creator']"
-                [label]="'item.page.authors' | translate">
+                [label]="'service.page.teammembers' | translate">
             </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }
@@ -143,7 +144,8 @@
 
             @if (object?.metadata?.['instrument.name']?.length) {
             <ds-metadata-representation-list class="ds-item-page-instrument-name-field" [parentItem]="object"
-                [itemType]="'Instrument'" [metadataFields]="['instrument.name']" [label]="'service.page.instrument'">
+                [itemType]="'Instrument'" [metadataFields]="['instrument.name']"
+                [label]="'service.page.instrument' | translate">
             </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }

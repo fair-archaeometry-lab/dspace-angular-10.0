@@ -51,6 +51,8 @@
    // translate for service filters
 
    "search.filters.filter.researchDiscipline.head": "Research Discipline", 
+   "search.filters.filter.researchDiscipline.label": "Search Discipline",
+   "search.filters.filter.researchDiscipline.placeholder": "Search Discipline",
    "search.filters.filter.technique.head": "Analytical Technique",
    "search.filters.filter.measurablePropertyClass.head": "Class of Measurable Property",
    "search.filters.filter.measurablePropertyMaterial.head": "Material",
@@ -62,8 +64,14 @@
    "search.filters.filter.creationDate.max.label": "End",
    "search.filters.filter.active.head": "Active",
    "search.filters.filter.readinessLevel.head": "Readiness Level",
+   "search.filters.filter.servicekeyword.head": "Keyword", 
+   "search.filters.filter.servicekeyword.label": "Search Keyword",
+   "search.filters.filter.servicekeyword.placeholder": "Search Keyword",
    "sorting.service.creationDate.DESC": "Date established Descending",
-
+   "vocabulary-treeview.tree.description.amgc": "Analytical Methods for Geochemistry (https://w3id.org/geochem/1.0/analyticalmethod/method)",
+   "vocabulary-treeview.tree.description.discipline": "Controlled Vocabulary for Research Disciplines",
+   "vocabulary-treeview.tree.description.matprop": "Controlled Vocabulary for Material Property Class",
+   "vocabulary-treeview.tree.description.gettym": "Getty AAT (https://www.getty.edu/research/tools/vocabularies/aat/)",
    // translate for instrument filters
 
    "search.filters.filter.owner.head": "Owner of Instrument",
@@ -234,6 +242,9 @@
    "service.page.cost-access-unit-cost": "Cost",
    "service.page.cost-currency": "Currency",
    "service.page.research-discipline": "Research Discipline", 
+   "service.page.instrument": "Related Instrument", 
+   "service.page.provider": "Service Provider",
+   "service.page.teammembers": "Team Member",
 
    // translate instrument simple item page
 

@@ -8237,4 +8237,28 @@
   "instrument.page.variable": "Measured Variables",
 
   "instrument.page.impact": "Impact on Samples",
+
+  "service.page.instrument": "Related Instrument",
+
+  "service.page.provider": "Service Provider",
+
+  "service.page.teammembers": "Team Member",
+
+  "search.filters.filter.researchDiscipline.label": "Search Discipline",
+
+  "search.filters.filter.researchDiscipline.placeholder": "Search Discipline",
+
+  "search.filters.filter.servicekeyword.head": "Keyword",
+
+  "search.filters.filter.servicekeyword.label": "Search Keyword",
+
+  "search.filters.filter.servicekeyword.placeholder": "Search Keyword",
+
+  "vocabulary-treeview.tree.description.amgc": "Analytical Methods for Geochemistry (https://w3id.org/geochem/1.0/analyticalmethod/method)",
+
+  "vocabulary-treeview.tree.description.discipline": "Controlled Vocabulary for Research Disciplines",
+
+  "vocabulary-treeview.tree.description.matprop": "Controlled Vocabulary for Material Property Class",
+
+  "vocabulary-treeview.tree.description.gettym": "Getty AAT (https://www.getty.edu/research/tools/vocabularies/aat/)",
 }
