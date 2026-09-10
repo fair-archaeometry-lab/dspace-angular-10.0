@@ -8222,7 +8222,7 @@
 
   "instrument.page.open-access": "Open Access",
 
-  "instrument.page.owner": "Owner",
+  "instrument.page.owner": "Owner (individual)",
 
   "instrument.page.contact": "Contact",
 
@@ -8261,4 +8261,8 @@
   "vocabulary-treeview.tree.description.matprop": "Controlled Vocabulary for Material Property Class",
 
   "vocabulary-treeview.tree.description.gettym": "Getty AAT (https://www.getty.edu/research/tools/vocabularies/aat/)",
+
+  "instrument.page.owner.individual": "Owner (individual)",
+
+  "instrument.page.owner.organisation": "Owner (Organisation)",
 }

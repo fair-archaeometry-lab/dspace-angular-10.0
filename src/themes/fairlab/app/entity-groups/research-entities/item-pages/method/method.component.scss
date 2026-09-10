@@ -83,12 +83,12 @@
 }
 
 /* Values (body) for metadata blocks */
-.simple-view-element-body,
-.ds-item-page-metadata-value,
-ds-generic-item-page-field .simple-view-element-body,
-ds-item-page-uri-field .simple-view-element-body,
-ds-item-page-collections .simple-view-element-body {
-    font-size: 0.875rem;
+:host ::ng-deep .simple-view-element-body,
+:host ::ng-deep .ds-item-page-metadata-value,
+:host ::ng-deep ds-generic-item-page-field .simple-view-element-body,
+:host ::ng-deep ds-item-page-uri-field .simple-view-element-body,
+:host ::ng-deep ds-item-page-collections .simple-view-element-body {
+    font-size: 1rem !important;
     font-weight: 300;
     color: #212529;
 }
