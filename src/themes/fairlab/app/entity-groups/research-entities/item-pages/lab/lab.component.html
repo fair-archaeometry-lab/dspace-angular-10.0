@@ -126,6 +126,13 @@
             <hr class="metadata-separator">
             }
 
+            @if (object?.metadata?.['organization.address.addressLocality']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['organization.address.addressLocality']"
+                [separator]="', '" [label]="'lab.page.address'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
         </div>
 
         <!-- MIDDLE COLUMN -->
@@ -158,15 +165,16 @@
             <hr class="metadata-separator">
             }
 
+            @if (object?.metadata?.['instrument.name']?.length) {
+            <ds-metadata-representation-list class="ds-item-page-lab-instrument-field" [parentItem]="object"
+                [itemType]="'Instrument'" [metadataFields]="['instrument.name']"
+                [label]="'lab.page.instrument' | translate">
+            </ds-metadata-representation-list>
+            <hr class="metadata-separator">
+            }
+
             <ds-item-page-collections [item]="object">
             </ds-item-page-collections>
-
-            <div class="mt-2">
-                <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
-                    <i class="fas fa-info-circle"></i>
-                    {{ 'item.page.link.full' | translate }}
-                </a>
-            </div>
 
         </div>
 
@@ -177,6 +185,12 @@
                 [pointFields]="['dcterms.spatial']" [bboxFields]="['dcterms.spatial']" [cluster]="true">
             </ds-geospatial-item-page-field>
             }
+            <div class="mt-2">
+                <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
+                    <i class="fas fa-info-circle"></i>
+                    {{ 'item.page.link.full' | translate }}
+                </a>
+            </div>
         </div>
 
     </div>
