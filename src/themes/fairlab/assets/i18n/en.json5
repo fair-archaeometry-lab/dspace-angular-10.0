@@ -93,7 +93,8 @@
       // translate for laboratory filters
 
    "search.filters.filter.institutionCategory.head": "Category of Institution",
-   "search.filters.filter.parentOrganization.head": "Parent Organization",
+   "search.filters.filter.institutionRole.head": "Role of Institution",
+   "search.filters.filter.parentOrganization.head": "Parent Organisation",
    "search.filters.filter.institutionCountry.head": "Country of Institution",
    "search.filters.filter.institutionStartDate.head": "Establihsed Date",
    "search.filters.filter.institutionStartDate.min.label": "Start",
@@ -260,5 +261,18 @@
   "instrument.page.model": "Model",
   "instrument.page.variable": "Measured Variables",
   "instrument.page.impact": "Impact on Samples",
+
+  // translate laboratory simple item page
+
+  "lab.page.established": "Establishment Date",
+  "lab.page.relationships": "Parent Organisation",
+  "lab.page.country": "Country",
+  "lab.page.address": "Address",
+  "lab.page.links": "Facility Website",
+  "lab.page.types": "Category of Institutionn", 
+  "lab.page.role": " Role of Institution", 
+  "lab.page.instrument": "Managed Instruments", 
+  "lab.page.rorid" : "ROR ID",
+  "lab.page.external-ids" : "Alternative ID",
 
 }

@@ -98,9 +98,8 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['dc.identifier']?.length) {
-            <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier']" [separator]="', '"
-                [label]="'lab.page.identifier'">
+            @if (object?.metadata?.['ror.id']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['ror.id']" [separator]="', '" [label]="'lab.page.rorid'">
             </ds-item-page-uri-field>
             <hr class="metadata-separator">
             }
