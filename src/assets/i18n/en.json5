@@ -8287,4 +8287,8 @@
   "lab.page.rorid": "ROR ID",
 
   "lab.page.external-ids": "Alternative ID",
+
+  "lab.page.identifier": "ROR ID",
+
+  "lab.page.parentOrganisation": "Parent Organisation",
 }

@@ -98,8 +98,9 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['ror.id']?.length) {
-            <ds-item-page-uri-field [item]="object" [fields]="['ror.id']" [separator]="', '" [label]="'lab.page.rorid'">
+            @if (object?.metadata?.['dc.identifier']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier']" [separator]="', '"
+                [label]="'lab.page.identifier'">
             </ds-item-page-uri-field>
             <hr class="metadata-separator">
             }
@@ -111,10 +112,11 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['ror.relationships.label']?.length) {
-            <ds-generic-item-page-field [item]="object" [fields]="['ror.relationships.label']" [separator]="', '"
-                [label]="'lab.page.relationships'">
-            </ds-generic-item-page-field>
+            @if (object?.metadata?.['ror.names.value']?.length) {
+            <ds-metadata-representation-list class="ds-item-page-lab-parent-field" [parentItem]="object"
+                [itemType]="'Laboratory'" [metadataFields]="['ror.names.value']"
+                [label]="'lab.page.parentOrganisation' | translate">
+            </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }
 

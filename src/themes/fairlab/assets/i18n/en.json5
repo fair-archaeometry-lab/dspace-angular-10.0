@@ -265,7 +265,7 @@
   // translate laboratory simple item page
 
   "lab.page.established": "Establishment Date",
-  "lab.page.relationships": "Parent Organisation",
+  "lab.page.parentOrganisation": "Parent Organisation",
   "lab.page.country": "Country",
   "lab.page.address": "Address",
   "lab.page.links": "Facility Website",
@@ -273,6 +273,7 @@
   "lab.page.role": " Role of Institution", 
   "lab.page.instrument": "Managed Instruments", 
   "lab.page.rorid" : "ROR ID",
+  "lab.page.identifier" : "ROR ID",
   "lab.page.external-ids" : "Alternative ID",
 
 }
