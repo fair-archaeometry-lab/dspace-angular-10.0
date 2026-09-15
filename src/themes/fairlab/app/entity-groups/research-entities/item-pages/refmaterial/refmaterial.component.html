@@ -105,12 +105,6 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['georem.citation.url']?.length) {
-            <ds-item-page-uri-field [item]="object" [fields]="['georem.citation.url']" [separator]="' | '"
-                [label]="'reference-material.page.citation-url'">
-            </ds-item-page-uri-field>
-            <hr class="metadata-separator">
-            }
 
             @if (object?.metadata?.['georem.provider.name']?.length) {
             <ds-generic-item-page-field [item]="object" [fields]="['georem.provider.name']" [separator]="', '"
@@ -119,17 +113,19 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['georem.provider.other']?.length) {
-            <ds-generic-item-page-field [item]="object" [fields]="['georem.provider.other']" [separator]="', '"
-                [label]="'reference-material.page.provider-other'">
-            </ds-generic-item-page-field>
+            @if (object?.metadata?.['ror.names.value']?.length) {
+            <ds-metadata-representation-list class="ds-item-page-refmaterial-organisation-field" [parentItem]="object"
+                [itemType]="'Laboratory'" [metadataFields]="['ror.names.value']"
+                [label]="'reference-material.page.curatingOrganisation' | translate">
+            </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['georem.referenceMaterial.institution']?.length) {
-            <ds-generic-item-page-field [item]="object" [fields]="['georem.referenceMaterial.institution']"
-                [separator]="', '" [label]="'reference-material.page.institution'">
-            </ds-generic-item-page-field>
+            @if (object?.metadata?.['dc.contributor.author']?.length || object?.metadata?.['dc.creator']?.length) {
+            <ds-metadata-representation-list class="ds-item-page-refmaterial-curator-field" [parentItem]="object"
+                [itemType]="'Person'" [metadataFields]="['dc.contributor.author', 'dc.creator']"
+                [label]="'reference-material.page.curator' | translate">
+            </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }
 
@@ -140,6 +136,13 @@
 
             @if (object?.metadata?.['dc.identifier.uri']?.length) {
             <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+            </ds-item-page-uri-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['georem.citation.url']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['georem.citation.url']" [separator]="' | '"
+                [label]="'reference-material.page.citation-url'">
             </ds-item-page-uri-field>
             <hr class="metadata-separator">
             }
