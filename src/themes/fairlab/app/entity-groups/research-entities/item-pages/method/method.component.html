@@ -150,6 +150,14 @@
             <hr class="metadata-separator">
             }
 
+            @if (object?.metadata?.['instrument.name']?.length) {
+            <ds-metadata-representation-list class="ds-item-page-method-instrument-field" [parentItem]="object"
+                [itemType]="'Instrument'" [metadataFields]="['instrument.name']"
+                [label]="'method.page.instrument' | translate">
+            </ds-metadata-representation-list>
+            <hr class="metadata-separator">
+            }
+
             <ds-item-page-collections [item]="object">
             </ds-item-page-collections>
 
