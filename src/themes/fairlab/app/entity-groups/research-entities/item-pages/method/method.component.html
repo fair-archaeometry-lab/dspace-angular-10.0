@@ -104,6 +104,13 @@
             <hr class="metadata-separator">
             }
 
+            @if (object?.metadata?.['dc.description.uri']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['dc.description.uri']" [separator]="' | '"
+                [label]="'method.page.description-uri'">
+            </ds-item-page-uri-field>
+            <hr class="metadata-separator">
+            }
+
             @if (object?.metadata?.['method.type']?.length) {
             <ds-generic-item-page-field [item]="object" [fields]="['method.type']" [separator]="', '"
                 [label]="'method.page.type'">
@@ -143,17 +150,18 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['dc.description.uri']?.length) {
-            <ds-item-page-uri-field [item]="object" [fields]="['dc.description.uri']" [separator]="' | '"
-                [label]="'method.page.description-uri'">
-            </ds-item-page-uri-field>
-            <hr class="metadata-separator">
-            }
-
             @if (object?.metadata?.['instrument.name']?.length) {
             <ds-metadata-representation-list class="ds-item-page-method-instrument-field" [parentItem]="object"
                 [itemType]="'Instrument'" [metadataFields]="['instrument.name']"
                 [label]="'method.page.instrument' | translate">
+            </ds-metadata-representation-list>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['software.name']?.length) {
+            <ds-metadata-representation-list class="ds-item-page-method-software-field" [parentItem]="object"
+                [itemType]="'Software'" [metadataFields]="['software.name']"
+                [label]="'method.page.software' | translate">
             </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }
