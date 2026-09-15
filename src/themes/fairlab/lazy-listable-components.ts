@@ -18,6 +18,7 @@ import { RefmaterialComponent } from './app/entity-groups/research-entities/item
 import { LaboratoryItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/laboratory/laboratory-item-metadata-list-element.component';
 import { InstrumentItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/instrument/instrument-item-metadata-list-element.component';
 import { SoftwareItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/software/software-item-metadata-list-element.component';
+import { MethodItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/method/method-item-metadata-list-element.component';
 /**
  * Add components that use the @listableObjectComponent decorator here.
  * This will ensure that the decorators get picked up when the app loads
@@ -43,4 +44,5 @@ export const LISTABLE_COMPONENTS = [
   LaboratoryItemMetadataListElementComponent,
   InstrumentItemMetadataListElementComponent,
   SoftwareItemMetadataListElementComponent,
+  MethodItemMetadataListElementComponent,
 ];

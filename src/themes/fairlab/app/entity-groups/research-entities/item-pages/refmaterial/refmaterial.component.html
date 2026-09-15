@@ -99,9 +99,9 @@
             }
 
             @if (object?.metadata?.['dc.identifier']?.length) {
-            <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier']" [separator]="', '"
+            <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier']" [separator]="', '"
                 [label]="'reference-material.page.identifier'">
-            </ds-generic-item-page-field>
+            </ds-item-page-uri-field>
             <hr class="metadata-separator">
             }
 
@@ -150,16 +150,16 @@
             <hr class="metadata-separator">
             }
 
+            @if (object?.metadata?.['method.name']?.length) {
+            <ds-metadata-representation-list class="ds-item-page-refmaterial-method-field" [parentItem]="object"
+                [itemType]="'StandardMethod'" [metadataFields]="['method.name']"
+                [label]="'reference-material.page.method' | translate">
+            </ds-metadata-representation-list>
+            <hr class="metadata-separator">
+            }
 
             <ds-item-page-collections [item]="object">
             </ds-item-page-collections>
-
-            <div class="mt-2">
-                <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
-                    <i class="fas fa-info-circle"></i>
-                    {{ 'item.page.link.full' | translate }}
-                </a>
-            </div>
 
         </div>
 
@@ -194,6 +194,12 @@
             <hr class="metadata-separator">
             }
 
+            <div class="mt-2">
+                <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
+                    <i class="fas fa-info-circle"></i>
+                    {{ 'item.page.link.full' | translate }}
+                </a>
+            </div>
         </div>
 
     </div>

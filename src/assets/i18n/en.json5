@@ -8311,4 +8311,34 @@
   "submission.sections.describe.relationship-lookup.title.isCreatedByAuthor": "Select person records in the system",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCreatedByAuthor": "Please tick the box and then scroll down to press close",
+
+  "submission.sections.describe.relationship-lookup.title.isDevelopedByAuthor": "Select person records in the system",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDevelopedByAuthor": "Please tick the box and then scroll down to press close",
+
+  "software.page.release-date": "Release Date",
+
+  "software.page.version-number": "Software Version",
+
+  "software.page.license": "Software License",
+
+  "software.page.identifier": "Software Identifier",
+
+  "software.page.status": "Status",
+
+  "software.page.developer": "Software Developer",
+
+  "software.page.download-url": "Downloadable Files",
+
+  "software.page.keywords": "Keywords",
+
+  "software.page.application-category": "Application Category",
+
+  "software.page.language": "Programming Language",
+
+  "software.page.system": "Operating System",
+
+  "software.page.code-repository": "Code Repository",
+
+  "software.page.related-link": "Related Links",
 }

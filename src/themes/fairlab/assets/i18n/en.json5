@@ -231,6 +231,9 @@
    "submission.sections.describe.relationship-lookup.title.isCreatedByAuthor": "Select person records in the system",
    "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCreatedByAuthor": "Please tick the box and then scroll down to press close",
 
+   "submission.sections.describe.relationship-lookup.title.isDevelopedByAuthor": "Select person records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isDevelopedByAuthor": "Please tick the box and then scroll down to press close",
+
    // translate service simple item page
 
    "service.page.creation-date": "Esalished Date of Service",
@@ -253,40 +256,56 @@
 
    // translate instrument simple item page
 
-  "instrument.page.commissioned-date": "Commissioned Date",
-  "instrument.page.identifier": "Exisiting Identifier",
-  "instrument.page.open-access": "Open Access",
-  "instrument.page.owner": "Owner (individual)",
-  "instrument.page.owner.organisation": "Owner (Organisation)",
-  "instrument.page.contact": "Contact",
-  "instrument.page.links": "Landing Page",
-  "instrument.page.instrument-type": "Instrument Type",
-  "instrument.page.manufacturer": "Manufacturer",
-  "instrument.page.model": "Model",
-  "instrument.page.variable": "Measured Variables",
-  "instrument.page.impact": "Impact on Samples",
+   "instrument.page.commissioned-date": "Commissioned Date",
+   "instrument.page.identifier": "Exisiting Identifier",
+   "instrument.page.open-access": "Open Access",
+   "instrument.page.owner": "Owner (individual)",
+   "instrument.page.owner.organisation": "Owner (Organisation)",
+   "instrument.page.contact": "Contact",
+   "instrument.page.links": "Landing Page",
+   "instrument.page.instrument-type": "Instrument Type",
+   "instrument.page.manufacturer": "Manufacturer",
+   "instrument.page.model": "Model",
+   "instrument.page.variable": "Measured Variables",
+   "instrument.page.impact": "Impact on Samples",
 
-  // translate laboratory simple item page
+    // translate laboratory simple item page
 
-  "lab.page.established": "Establishment Date",
-  "lab.page.parentOrganisation": "Parent Organisation",
-  "lab.page.country": "Country",
-  "lab.page.address": "Address",
-  "lab.page.links": "Facility Website",
-  "lab.page.types": "Category of Institutionn", 
-  "lab.page.role": " Role of Institution", 
-  "lab.page.instrument": "Managed Instruments", 
-  "lab.page.rorid" : "ROR ID",
-  "lab.page.identifier" : "ROR ID",
-  "lab.page.external-ids" : "Alternative ID",
+   "lab.page.established": "Establishment Date",
+   "lab.page.parentOrganisation": "Parent Organisation",
+   "lab.page.country": "Country",
+   "lab.page.address": "Address",
+   "lab.page.links": "Facility Website",
+   "lab.page.types": "Category of Institutionn", 
+   "lab.page.role": " Role of Institution", 
+   "lab.page.instrument": "Managed Instruments", 
+   "lab.page.rorid" : "ROR ID",
+   "lab.page.identifier" : "ROR ID",
+   "lab.page.external-ids" : "Alternative ID",
 
-  // translate method simple item page
+    // translate method simple item page
 
-  "method.page.create-date": "Creation Date",
-  "method.page.version": "Method Version",
-  "method.page.description-uri": "Method Link",
-  "method.page.type": "Type of Method",
-  "method.page.technique": "Related Anayltical Technique",
-  "method.page.instrument": "Related Instrument", 
-  "method.page.software": "Related Software",
+   "method.page.create-date": "Creation Date",
+   "method.page.version": "Method Version",
+   "method.page.description-uri": "Method Link",
+   "method.page.type": "Type of Method",
+   "method.page.technique": "Related Anayltical Technique",
+   "method.page.instrument": "Related Instrument", 
+   "method.page.software": "Related Software",
+
+    // translate software simple item page
+
+   "software.page.release-date": "Release Date",
+   "software.page.version-number": "Software Version",
+   "software.page.license": "Software License",
+   "software.page.identifier": "Software Identifier",
+   "software.page.status": "Status",
+   "software.page.developer": "Software Developer",
+   "software.page.download-url": "Downloadable Files",
+   "software.page.keywords": "Keywords",
+   "software.page.application-category": "Application Category",
+   "software.page.language": "Programming Language",
+   "software.page.system": "Operating System",
+   "software.page.code-repository": "Code Repository",
+   "software.page.related-link": "Related Links",
 }
