@@ -227,6 +227,10 @@
    "submission.sections.describe.relationship-lookup.title.producesPublication": "Select publication records in the system",
    "submission.sections.describe.relationship-lookup.search-tab.tab-title.producesPublication": "Please tick the box and then scroll down to press close",
 
+   "123456789/45.search.results.head": "Search Author", 
+   "submission.sections.describe.relationship-lookup.title.isCreatedByAuthor": "Select person records in the system",
+   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isCreatedByAuthor": "Please tick the box and then scroll down to press close",
+
    // translate service simple item page
 
    "service.page.creation-date": "Esalished Date of Service",
@@ -276,4 +280,13 @@
   "lab.page.identifier" : "ROR ID",
   "lab.page.external-ids" : "Alternative ID",
 
+  // translate method simple item page
+
+  "method.page.create-date": "Creation Date",
+  "method.page.version": "Method Version",
+  "method.page.description-uri": "Method Link",
+  "method.page.type": "Type of Method",
+  "method.page.technique": "Related Anayltical Technique",
+  "method.page.instrument": "Related Instrument", 
+  "method.page.software": "Related Software",
 }
