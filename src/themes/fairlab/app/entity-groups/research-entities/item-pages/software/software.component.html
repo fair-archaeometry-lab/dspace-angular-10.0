@@ -127,9 +127,9 @@
             }
 
             @if (object?.metadata?.['dc.contributor.author']?.length || object?.metadata?.['dc.creator']?.length) {
-            <ds-metadata-representation-list class="ds-item-page-mixed-author-field" [parentItem]="object"
+            <ds-metadata-representation-list class="ds-item-page-software-developer-field" [parentItem]="object"
                 [itemType]="'Person'" [metadataFields]="['dc.contributor.author', 'dc.creator']"
-                [label]="'item.page.authors' | translate">
+                [label]="'software.page.developer' | translate">
             </ds-metadata-representation-list>
             <hr class="metadata-separator">
             }
