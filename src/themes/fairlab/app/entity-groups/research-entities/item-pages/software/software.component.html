@@ -113,9 +113,9 @@
             }
 
             @if (object?.metadata?.['dc.identifier']?.length) {
-            <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier']" [separator]="', '"
+            <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier']" [separator]="', '"
                 [label]="'software.page.identifier'">
-            </ds-generic-item-page-field>
+            </ds-item-page-uri-field>
             <hr class="metadata-separator">
             }
 
@@ -168,13 +168,6 @@
             <ds-item-page-collections [item]="object">
             </ds-item-page-collections>
 
-            <div class="mt-2">
-                <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
-                    <i class="fas fa-info-circle"></i>
-                    {{ 'item.page.link.full' | translate }}
-                </a>
-            </div>
-
         </div>
 
         <!-- COLUMN 3 -->
@@ -215,6 +208,12 @@
             <hr class="metadata-separator">
             }
 
+            <div class="mt-2">
+                <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button" tabindex="0">
+                    <i class="fas fa-info-circle"></i>
+                    {{ 'item.page.link.full' | translate }}
+                </a>
+            </div>
         </div>
 
     </div>
