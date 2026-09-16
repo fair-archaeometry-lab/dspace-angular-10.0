@@ -1,45 +1,61 @@
 import { AsyncPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Context } from '@dspace/core/shared/context.model';
 import { ViewMode } from '@dspace/core/shared/view-mode.model';
 import { TranslateModule } from '@ngx-translate/core';
-import { GenericItemPageFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
-import { ThemedItemPageTitleFieldComponent } from 'src/app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
-import { TabbedRelatedEntitiesSearchComponent } from 'src/app/item-page/simple/related-entities/tabbed-related-entities-search/tabbed-related-entities-search.component';
-import { RelatedItemsComponent } from 'src/app/item-page/simple/related-items/related-items-component';
-import { DsoEditMenuComponent } from 'src/app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
-import { MetadataFieldWrapperComponent } from 'src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
-import { ThemedResultsBackButtonComponent } from 'src/app/shared/results-back-button/themed-results-back-button.component';
-import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
-import { PersonComponent as BaseComponent } from '../../../../../../../app/entity-groups/research-entities/item-pages/person/person.component';
-import { ItemPageOrcidFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/orcid/item-page-orcid-field.component';
-import { AuthorityRelatedEntitiesSearchComponent } from '../../../../../../../app/item-page/simple/related-entities/authority-related-entities-search/authority-related-entities-search.component';
+import { CollectionsComponent } from '../../../../../../../app/item-page/field-components/collections/collections.component';
+import { ThemedMediaViewerComponent } from '../../../../../../../app/item-page/media-viewer/themed-media-viewer.component';
+import { MiradorViewerComponent } from '../../../../../../../app/item-page/mirador-viewer/mirador-viewer.component';
+import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
+import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
+import { GeospatialItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/geospatial/geospatial-item-page-field.component';
+import { ItemPageLicenseFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/license/item-page-license-field.component';
+import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
+import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
+import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
+import { ThemedMetadataRepresentationListComponent } from '../../../../../../../app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
+import { AttachmentSectionComponent } from '../../../../../../../app/shared/bitstream-attachment/section/attachment-section.component';
+import { DsoEditMenuComponent } from '../../../../../../../app/shared/dso-page/dso-edit-menu/dso-edit-menu.component';
+import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/metadata-field-wrapper/metadata-field-wrapper.component';
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
+import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
+import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent('Person', ViewMode.StandalonePage, Context.Any, 'custom')
+@listableObjectComponent('Person', ViewMode.StandalonePage, Context.Any, 'fairlab')
 @Component({
-  selector: 'ds-person',
-  // styleUrls: ['./person.component.scss'],
-  styleUrls: ['../../../../../../../app/entity-groups/research-entities/item-pages/person/person.component.scss'],
-  // templateUrl: './person.component.html',
-  templateUrl: '../../../../../../../app/entity-groups/research-entities/item-pages/person/person.component.html',
+  selector: 'ds-fairlab-person',
+  styleUrls: ['./person.component.scss'],
+  templateUrl: './person.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AsyncPipe,
-    AuthorityRelatedEntitiesSearchComponent,
+    AttachmentSectionComponent,
+    CollectionsComponent,
     DsoEditMenuComponent,
     GenericItemPageFieldComponent,
-    ItemPageOrcidFieldComponent,
+    GeospatialItemPageFieldComponent,
+    ItemPageAbstractFieldComponent,
+    ItemPageDateFieldComponent,
+    ItemPageLicenseFieldComponent,
+    ItemPageUriFieldComponent,
     MetadataFieldWrapperComponent,
-    RelatedItemsComponent,
+    MiradorViewerComponent,
     RouterLink,
-    TabbedRelatedEntitiesSearchComponent,
+    ThemedFileSectionComponent,
     ThemedItemPageTitleFieldComponent,
+    ThemedMediaViewerComponent,
+    ThemedMetadataRepresentationListComponent,
     ThemedResultsBackButtonComponent,
     ThemedThumbnailComponent,
     TranslateModule,
   ],
 })
-export class PersonComponent extends BaseComponent {
+export class PersonComponent extends ItemComponent {
 }
