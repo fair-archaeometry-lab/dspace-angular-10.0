@@ -308,4 +308,18 @@
    "software.page.system": "Operating System",
    "software.page.code-repository": "Code Repository",
    "software.page.related-link": "Related Links",
+
+    // translate Reference material simple item page
+
+   "reference-material.page.issued-date": "Date of Manufacture",
+   "reference-material.page.identifier": "Existing Identifier",
+   "reference-material.page.provider-name": "Manufacturer",
+   "reference-material.page.curatingOrganisation": "Curating Institution",
+   "reference-material.page.curator": "Curator",
+   "reference-material.page.citation-url": "Related Digital Resources",
+   "reference-material.page.method": "Related Analytical Protocol",
+   "reference-material.page.category": "Cateory of Reference Material",
+   "reference-material.page.material-type": "Type of Material",
+   "reference-material.page.chemistry-method": "Measurement Technique",
+   "reference-material.page.chemistry-analyte": "Measured Analytes/Parameters",
 }

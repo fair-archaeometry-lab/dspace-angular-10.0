@@ -2,7 +2,7 @@ import { JournalComponent } from './app/entity-groups/journal-entities/item-page
 import { JournalIssueComponent } from './app/entity-groups/journal-entities/item-pages/journal-issue/journal-issue.component';
 import { JournalVolumeComponent } from './app/entity-groups/journal-entities/item-pages/journal-volume/journal-volume.component';
 import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
-import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+/* import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component'; */
 import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { BrowseEntryListElementComponent } from './app/shared/object-list/browse-entry-list-element/browse-entry-list-element.component';
 import { CollectionListElementComponent } from './app/shared/object-list/collection-list-element/collection-list-element.component';
@@ -15,6 +15,7 @@ import { LabComponent } from './app/entity-groups/research-entities/item-pages/l
 import { SoftwareComponent } from './app/entity-groups/research-entities/item-pages/software/software.component';
 import { MethodComponent } from './app/entity-groups/research-entities/item-pages/method/method.component';
 import { RefmaterialComponent } from './app/entity-groups/research-entities/item-pages/refmaterial/refmaterial.component';
+import { PublicationComponent } from './app/entity-groups/research-entities/item-pages/publication/publication.component';
 import { LaboratoryItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/laboratory/laboratory-item-metadata-list-element.component';
 import { InstrumentItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/instrument/instrument-item-metadata-list-element.component';
 import { SoftwareItemMetadataListElementComponent } from './app/entity-groups/research-entities/metadata-representations/software/software-item-metadata-list-element.component';
