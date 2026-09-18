@@ -188,6 +188,20 @@
     </div>
 </div>
 <!-- OPTIONAL FIELDS -->
+
+<!-- RELATED PUBLICATIONS -->
+@if (object?.metadata?.['oaire.citation.title']?.length) {
+<div class="container mt-4 related-publications-section">
+    <h2 class="h4 mb-3">
+        {{ 'oaire.citation.title' | translate }}
+    </h2>
+
+    <ds-metadata-representation-list class="ds-item-page-related-publications-field" [parentItem]="object"
+        [itemType]="'Publication'" [metadataFields]="['oaire.citation.title']"
+        [label]="'oaire.citation.title' | translate">
+    </ds-metadata-representation-list>
+</div>
+}
 <div class="container mt-3">
     <div class="row">
         <div class="col-12">

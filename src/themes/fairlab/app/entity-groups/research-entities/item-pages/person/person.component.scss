@@ -4,7 +4,6 @@
 
 .hero-section {
     background-color: #f9fafb;
-    /* light tint */
     border-radius: 0.75rem;
     border: 1px solid #cfd4da;
     box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.10);
@@ -14,21 +13,17 @@
     padding-bottom: 0.75rem;
 }
 
-/* Reduce horizontal gutters and align columns vertically */
 .hero-section .row {
     --bs-gutter-x: 1rem;
-    /* default is 1.5rem; smaller brings columns closer */
     --bs-gutter-y: 0.5rem;
     align-items: center;
 }
 
-/* Slightly reduce column internal padding */
 .hero-section .row>div {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
-/* Thumbnail box consistent with FAO layout */
 .item-page-thumbnail-container .thumbnail,
 .hero-section .thumbnail {
     border: 1px solid #dee2e6;
@@ -37,7 +32,6 @@
     background-color: #fdfdfd;
 }
 
-/* Title line */
 .hero-section h2,
 .hero-section .ds-item-page-title-field {
     font-size: 1.25rem;
@@ -45,10 +39,6 @@
     margin-bottom: 0.25rem;
 }
 
-/* Edit menu next to title */
-
-
-/* Social buttons: small, square-like, matching FAO feel */
 .hero-section .btn.btn-sm {
     font-size: 0.85rem;
     font-weight: 600;
@@ -56,33 +46,28 @@
     padding: 0.25rem 0.6rem;
 }
 
-/* Attachments / file section in right hero column */
 .hero-section ds-item-page-attachment-section,
 .hero-section ds-item-page-file-section {
     display: block;
     margin-top: 0.5rem;
 }
 
-
 /* ================================
    Metadata titles & values
    ================================ */
 
-/* Local override: metadata titles (labels) on this item page */
 :host ::ng-deep .simple-view-element-header,
 :host ::ng-deep .ds-item-page-metadata-title,
 :host ::ng-deep ds-generic-item-page-field h5,
 :host ::ng-deep ds-item-page-uri-field h5,
 :host ::ng-deep ds-item-page-collections h5 {
     color: #116AAB;
-    /* choose any valid color: hex, rgb, or named */
     display: block;
     font-weight: 600;
     font-size: 1rem !important;
     margin-bottom: 0 !important;
 }
 
-/* Values (body) for metadata blocks */
 :host ::ng-deep .simple-view-element-body,
 :host ::ng-deep .ds-item-page-metadata-value,
 :host ::ng-deep ds-generic-item-page-field .simple-view-element-body,
@@ -93,14 +78,12 @@
     color: #212529;
 }
 
-/* Ensure lists inside metadata values look clean */
 .simple-view-element-body ul,
 .simple-view-element-body li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
 
 /* ================================
    Metadata grid (3 columns)
@@ -114,13 +97,10 @@
     margin-bottom: 1.5rem;
 }
 
-/* Column spacing */
 .metadata-grid .col-12.col-md-4 {
     padding-right: 1rem;
     padding-left: 1rem;
 }
-
-/* Separator created only when its @if metadata condition is true */
 
 .metadata-grid .metadata-separator {
     border: 0;
@@ -130,7 +110,6 @@
     opacity: 1;
 }
 
-/* Make anchors in metadata blocks look like normal text links */
 .metadata-grid a {
     color: #0d6efd;
     text-decoration: none;
@@ -141,12 +120,201 @@
     text-decoration: underline;
 }
 
+/* ================================
+   Related publications
+   ================================ */
+
+/*
+ * This rule is scoped to the person component and to the
+ * related-publications-section wrapper in person.component.html.
+ * It does not affect service, instrument, search, or submission pages.
+ */
+:host {
+    .related-publications-section {
+        ::ng-deep ds-themed-metadata-representation-list {
+
+            /* Hide thumbnails and abstracts */
+            ds-thumbnail,
+            .item-list-abstract {
+                display: none !important;
+            }
+
+            /* Make nested wrappers transparent to the publication grid */
+            ds-metadata-field-wrapper,
+            .simple-view-element,
+            .simple-view-element-body {
+                display: contents !important;
+            }
+
+            /* Let the publication section heading span the grid */
+            .simple-view-element-header {
+                grid-column: 1 / -1 !important;
+            }
+
+            /* Three publications per row on larger screens */
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            grid-auto-flow: row !important;
+            column-gap: 2rem;
+            row-gap: 1.5rem;
+
+            /* Make each publication a grid item */
+            ds-metadata-representation-loader,
+            ds-item-search-result-list-element {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+            }
+
+            /* Remove the original thumbnail column */
+            ds-item-search-result-list-element {
+                .row {
+                    display: block !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    margin: 0 !important;
+                }
+
+                .row>div:first-child {
+                    display: none !important;
+                }
+
+                .row>div:last-child {
+                    display: block !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+            }
+
+            /* Allow titles to wrap, but keep authors/date below the title */
+            .item-list-title,
+            .item-list-title a,
+            a.item-list-title,
+            a.lead.item-list-title {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                white-space: normal !important;
+                overflow-wrap: break-word !important;
+            }
+
+            /* Full author/date line on larger screens */
+            .item-list-authors,
+            .item-list-date,
+            .clamp-default-1.min-1,
+            .clamp-default-1.min-1>.content {
+                display: inline !important;
+                width: auto !important;
+                max-width: none !important;
+                min-width: 0 !important;
+                height: auto !important;
+                max-height: none !important;
+                overflow: visible !important;
+                white-space: nowrap !important;
+                text-overflow: clip !important;
+                -webkit-line-clamp: unset !important;
+            }
+        }
+    }
+}
+
+/* ================================
+   Related publications on mobile
+   ================================ */
+
+@media (max-width: 767.98px) {
+    :host {
+        .related-publications-section {
+            ::ng-deep ds-themed-metadata-representation-list {
+                /* One publication per row */
+                display: grid !important;
+                grid-template-columns: minmax(0, 1fr) !important;
+                grid-auto-flow: row !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                column-gap: 0 !important;
+                row-gap: 1.5rem !important;
+
+                ds-metadata-field-wrapper,
+                .simple-view-element,
+                .simple-view-element-body {
+                    display: contents !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                }
+
+                .simple-view-element-header {
+                    grid-column: 1 !important;
+                }
+
+                ds-metadata-representation-loader,
+                ds-item-search-result-list-element {
+                    display: block !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    min-width: 0 !important;
+                }
+
+                ds-item-search-result-list-element {
+                    .row {
+                        display: block !important;
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        margin: 0 !important;
+                    }
+
+                    .row>div:first-child {
+                        display: none !important;
+                    }
+
+                    .row>div:last-child {
+                        display: block !important;
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                    }
+                }
+
+                .item-list-title,
+                .item-list-title a,
+                a.item-list-title,
+                a.lead.item-list-title {
+                    display: block !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    white-space: normal !important;
+                    overflow-wrap: break-word !important;
+                }
+
+                /* Allow author/date metadata to wrap on narrow screens */
+                .item-list-authors,
+                .item-list-date,
+                .clamp-default-1.min-1,
+                .clamp-default-1.min-1>.content {
+                    display: inline !important;
+                    width: auto !important;
+                    max-width: 100% !important;
+                    min-width: 0 !important;
+                    height: auto !important;
+                    max-height: none !important;
+                    white-space: normal !important;
+                    overflow: visible !important;
+                    text-overflow: clip !important;
+                    -webkit-line-clamp: unset !important;
+                }
+            }
+        }
+    }
+}
 
 /* ================================
    Collections & abstract blocks
    ================================ */
 
-/* Collections list appearance similar to FAO */
 ds-item-page-collections .simple-view-element-header {
     margin-top: 0.5rem;
 }
@@ -156,7 +324,6 @@ ds-item-page-collections .simple-view-element-body a {
     margin-bottom: 0.25rem;
 }
 
-/* Abstract / description block */
 ds-item-page-abstract-field .simple-view-element-header {
     margin-top: 0.5rem;
 }
@@ -164,7 +331,6 @@ ds-item-page-abstract-field .simple-view-element-header {
 ds-item-page-abstract-field .simple-view-element-body {
     margin-top: 0.25rem;
 }
-
 
 /* ================================
    Geospatial map & license section
