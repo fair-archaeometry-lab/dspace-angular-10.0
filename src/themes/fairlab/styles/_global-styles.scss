@@ -1,9 +1,19 @@
 // Add any global css for the theme here
+ds-existing-metadata-list-element {
+
+  // remove thumbnail and abstract sections from related items in the submission form
+  .item-list-abstract,
+  ds-thumbnail {
+    display: none !important;
+  }
+}
 
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
 
-.facet-filter, .setting-option, .advanced-search {
+.facet-filter,
+.setting-option,
+.advanced-search {
   background-color: var(--bs-light);
   border-radius: var(--bs-border-radius);
 
@@ -17,7 +27,8 @@
     background-color: var(--bs-primary);
   }
 
-  h4, .h4 {
+  h4,
+  .h4 {
     font-size: 1.1rem
   }
 }
