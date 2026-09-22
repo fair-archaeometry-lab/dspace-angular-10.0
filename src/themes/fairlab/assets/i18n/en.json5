@@ -332,4 +332,18 @@
    "publication.page.citation": "Full Citation",
    "publication.page.ispartofseries": "Published in Series",
    "publication.page.sponsorship": "Funding",
+
+    // translate person simple item page
+
+   "person.page.family-name": "Family Name",
+   "person.page.given-name": "Given Name",
+   "person.page.identifier": "OCRID/Other IDs",
+   "person.page.birth-date": "Date of Birth",
+   "person.page.research-discipline": "Research Discipline",
+   "person.page.proposal-start-date": "Start Date of Position",
+   "person.page.proposal-end-date": "End Date of Position",
+   "person.page.job-title": "Jot Title",
+   "person.page.role-title": "Role in Service",
+   "person.page.affiliation": "Affiliation",
+   "oaire.citation.title": "Related Publications",
 }
