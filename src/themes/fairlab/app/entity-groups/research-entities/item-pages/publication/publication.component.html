@@ -134,11 +134,6 @@
             <hr class="metadata-separator">
             }
 
-        </div>
-
-        <!-- COLUMN 2 -->
-        <div class="col-12 col-md-6 mb-4">
-
             @if (object?.metadata?.['dc.identifier.citation']?.length) {
             <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.citation']"
                 [label]="'publication.page.citation'">
@@ -146,16 +141,21 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['dc.relation.ispartofseries']?.length) {
-            <ds-generic-item-page-field [item]="object" [fields]="['dc.relation.ispartofseries']"
-                [label]="'publication.page.ispartofseries'">
-            </ds-generic-item-page-field>
-            <hr class="metadata-separator">
-            }
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div class="col-12 col-md-6 mb-4">
 
             @if (object?.metadata?.['dc.publisher']?.length) {
             <ds-generic-item-page-field [item]="object" [fields]="['dc.publisher']" [separator]="' , '"
                 [label]="'publication.page.publisher'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
+            @if (object?.metadata?.['dc.relation.ispartofseries']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['dc.relation.ispartofseries']"
+                [label]="'publication.page.ispartofseries'">
             </ds-generic-item-page-field>
             <hr class="metadata-separator">
             }

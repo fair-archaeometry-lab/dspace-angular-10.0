@@ -8363,4 +8363,18 @@
   "reference-material.page.chemistry-method": "Measurement Technique",
 
   "reference-material.page.chemistry-analyte": "Measured Analytes/Parameters",
+
+  "publication.page.issued-date": "Date Issued",
+
+  "publication.page.type": "Resource Type",
+
+  "publication.page.language": "Language",
+
+  "publication.page.subject": "Subject/Keyword",
+
+  "publication.page.citation": "Full Citation",
+
+  "publication.page.ispartofseries": "Published in Series",
+
+  "publication.page.sponsorship": "Funding",
 }
