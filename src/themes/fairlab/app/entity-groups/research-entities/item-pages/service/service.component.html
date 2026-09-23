@@ -173,8 +173,8 @@
             <hr class="metadata-separator">
             }
 
-            @if (object?.metadata?.['service.keyword']?.length) {
-            <ds-generic-item-page-field [item]="object" [fields]="['service.keyword']" [separator]="', '"
+            @if (object?.metadata?.['dc.subject']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['dc.subject']" [separator]="', '"
                 [label]="'service.page.keywords'">
             </ds-generic-item-page-field>
             <hr class="metadata-separator">

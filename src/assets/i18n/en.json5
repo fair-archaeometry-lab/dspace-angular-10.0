@@ -8399,4 +8399,16 @@
   "person.page.affiliation": "Affiliation",
 
   "oaire.citation.title": "Related Publications",
+
+  "search.filters.filter.affiliationName.head": "Affiliation",
+
+  "search.filters.filter.personRole.head": "Service Role",
+
+  "search.filters.filter.personStartDate.head": "Start Date of Empolyment",
+
+  "search.filters.filter.personStartDate.min.label": "lower limit",
+
+  "search.filters.filter.personStartDate.max.label": "upper limit",
+
+  "person.page.knows-language": "Language",
 }

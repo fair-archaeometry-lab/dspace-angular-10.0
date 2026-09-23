@@ -127,6 +127,13 @@
             <hr class="metadata-separator">
             }
 
+            @if (object?.metadata?.['person.knowsLanguage']?.length) {
+            <ds-generic-item-page-field [item]="object" [fields]="['person.knowsLanguage']" [separator]="', '"
+                [label]="'person.page.knows-language'">
+            </ds-generic-item-page-field>
+            <hr class="metadata-separator">
+            }
+
             @if (object?.metadata?.['service.researchDiscipline']?.length) {
             <ds-generic-item-page-field [item]="object" [fields]="['service.researchDiscipline']"
                 [label]="'person.page.research-discipline'">

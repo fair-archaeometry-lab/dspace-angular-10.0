@@ -145,6 +145,13 @@
  
    "search.filters.filter.publisher.head": "Publisher",
 
+            // translate for person filters
+
+   "search.filters.filter.affiliationName.head": "Affiliation",
+   "search.filters.filter.personRole.head": "Service Role",
+   "search.filters.filter.personStartDate.head": "Start Date of Empolyment",
+   "search.filters.filter.personStartDate.min.label": "lower limit",
+   "search.filters.filter.personStartDate.max.label": "upper limit",
     
     // collection item labels
 
@@ -346,4 +353,5 @@
    "person.page.role-title": "Role in Service",
    "person.page.affiliation": "Affiliation",
    "oaire.citation.title": "Related Publications",
+   "person.page.knows-language": "Language",
 }
