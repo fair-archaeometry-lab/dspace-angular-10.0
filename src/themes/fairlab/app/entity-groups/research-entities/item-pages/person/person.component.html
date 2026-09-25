@@ -146,6 +146,12 @@
         <!-- COLUMN 2 -->
         <div class="col-12 col-md-6 mb-4">
 
+            @if (object?.metadata?.['dc.identifier.uri']?.length) {
+            <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+            </ds-item-page-uri-field>
+            <hr class="metadata-separator">
+            }
+
             @if (object?.metadata?.['orcid.researchResource.proposalStartDate']?.length) {
             <ds-generic-item-page-field [item]="object" [fields]="['orcid.researchResource.proposalStartDate']"
                 [label]="'person.page.proposal-start-date'">
